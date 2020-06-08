@@ -3256,6 +3256,9 @@ $shareBorderColor: #ececec;
 
 /*================ Medium-down screen nav styles ================*/
 @include at-query ($max, $medium) {
+  .login-cart {
+    display: none;
+  }
   .nav-bar {
     position: fixed;
 
@@ -3318,6 +3321,18 @@ $shareBorderColor: #ececec;
 
 /*================ Large screen bar navigation ================*/
 @include at-query ($min, $large) {
+  .login-cart {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    .login-or-create {
+      display: flex;
+      p {
+        padding: 0 10px;
+      }
+    }
+  }
+
   .nav-bar {
     .align-nav-search-bar { // new
       display: flex; // new

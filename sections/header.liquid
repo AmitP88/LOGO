@@ -75,12 +75,23 @@
           <br class="medium-down--hide">
         {% endif %}
 
-        <!-- {% include 'search-bar' %} -->
+        <div class="login-cart">
+          <div class="login-or-create">
+            <a href="{{ routes.root_url }}">
+              <span>LOG IN</span>
+            </a>
+            <p>OR</p>
+            <a href="{{ routes.root_url }}">
+              <span>CREAT ACCOUNT</span>
+            </a>
+          </div>
 
-        <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle">
-          <span class="icon icon-cart"></span>
-          {{ 'layout.cart.cart' | t }} <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
-        </a>
+          <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle">
+            <span class="icon icon-cart"></span>
+            {{ 'layout.cart.cart' | t }} <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
+          </a>          
+        </div>
+
       </div>
     </div>
 
