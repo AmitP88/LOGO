@@ -101,8 +101,10 @@
 
 <nav class="nav-bar" id="navBar" role="navigation">
   <div class="wrapper">
-    {% include 'mobile-nav' %}
-    <div class="align-nav-search-bar">
+    <div class="mobile-nav-container grid-order">
+      {% include 'mobile-nav' %}
+    </div>
+    <div class="align-nav-search-bar grid-order">
       {% include 'site-nav' %}
       {% include 'search-bar' %}
     </div>

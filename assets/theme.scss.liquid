@@ -3271,15 +3271,26 @@ $shareBorderColor: #ececec;
 
     .wrapper {
       padding: $gutter/2 0 0;
-
+      display: grid; // new
       .show-nav & {
-        min-height: 101%;
+        min-height: 90%; // old min-height: 101%
       }
+
+      .grid-order:nth-of-type(1) { // new
+        order: 2;
+      }
+
+      .grid-order:nth-of-type(2) { // new
+        order: 1;
+      }
+
+
     }
 
     .search-bar {
-      margin: 0 $gutter/2 $gutter/2;
-      padding: 15px 0; // new
+      // margin: 0 $gutter/2 $gutter/2;
+      margin: 0 15px;
+      // padding: 15px 0; // new
       width: auto;
       input[type="search"]::-webkit-input-placeholder {
         color: color-control($colorNav);
