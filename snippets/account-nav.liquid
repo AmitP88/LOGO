@@ -1,1 +1,9 @@
-<p>This is the account nav at the top</p>
+<ul class="account-nav">
+  {% for link in linklists.account-menu.links %}
+    <li>
+      <a href="{{ link.url }}">
+        {{ link.title | escape }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
