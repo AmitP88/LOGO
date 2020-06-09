@@ -1,4 +1,15 @@
 <ul class="account-nav">
+  <!-- Create an array for the account_nav icons in assets/header_icons folder -->
+  {% assign account_icons = "" | split: ',' %}
+  {% for image in assets.header_icons.account_nav %}
+    {% if image.path contains "assets/header_icons/account_nav" %}
+      <!-- Push image into array -->
+      {% assign account_icons = account_icons | push: image %}
+    {% endif %}
+  {% endfor %}
+
+
+
   {% for link in linklists.account-menu.links %}
     <li>
       <a href="{{ link.url }}">
