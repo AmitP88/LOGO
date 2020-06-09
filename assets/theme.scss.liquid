@@ -43,6 +43,8 @@ $colorBody: {{ settings.color_body_bg }};
 $colorTextBody: {{ settings.color_body_text }};
 $colorBorder: {{ settings.color_borders }};
 
+// $colorGreenBackground: {{ color: '709b1d' }};
+
 /*============================================================================
   Dependency-free breakpoint mixin
 // http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/
@@ -3191,6 +3193,11 @@ $shareBorderColor: #ececec;
   }
 }
 
+.top-menu {
+  // background-color: $colorGreenBackground;
+  background-color: #709b1d;  
+}
+
 .account-nav {
   display: flex;
   margin: 0px auto;
@@ -3198,6 +3205,9 @@ $shareBorderColor: #ececec;
   li {
     margin-right: 20px;
     margin-bottom: 0;
+    a {
+      color: #ffff;      
+    }
   }
 }
 
