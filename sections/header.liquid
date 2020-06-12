@@ -9,7 +9,11 @@
 <header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
   <div class="wrapper">
     <div class="grid--full">
-      <div class="grid-item large--one-half"></div>
+      <div class="grid-item large--one-half">
+        <a href="/">
+          {{ 'mockup_logo.png' | file_img_url | img_tag }}
+        </a>
+      </div>
 
       <div class="grid-item large--one-half text-center large--text-right">
         {% if section.settings.show_announcement or shop.customer_accounts_enabled %}
