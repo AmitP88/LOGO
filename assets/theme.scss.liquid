@@ -3203,6 +3203,9 @@ $shareBorderColor: #ececec;
   display: flex;
   margin: 0px auto;
   font-size: {{ settings.type_navigation_size }};
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
   li {
     margin-right: 20px;
     margin-bottom: 0;
