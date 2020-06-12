@@ -2,6 +2,15 @@
   {% for link in linklists.account-menu.links %}
     <li>
       <a href="{{ link.url }}">
+        {% if link.title == "Home" %}
+          {{ 'Home.png' | file_img_url | img_tag }}
+        {% elsif link.title == "My Account" %}
+          {{ 'My_Account.png' | file_img_url | img_tag }}
+        {% elsif link.title == "Shopping Cart" %}
+          {{ 'Shopping_Cart.png' | file_img_url | img_tag }}
+        {% elsif link.title == "Checkout" %}
+          {{ 'Checkout.png' | file_img_url | img_tag }}
+        {% endif %}
         {{ link.title | escape }}
       </a>
     </li>
