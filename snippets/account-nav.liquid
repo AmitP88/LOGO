@@ -3,13 +3,13 @@
     <li>
       <a href="{{ link.url }}">
         {% if link.title == "Home" %}
-          {{ 'Home.png' | file_img_url | img_tag }}
+          {{ 'Home_white.png' | file_img_url | img_tag }}
         {% elsif link.title == "My Account" %}
-          {{ 'My_Account.png' | file_img_url | img_tag }}
+          {{ 'account_white.png' | file_img_url | img_tag }}
         {% elsif link.title == "Shopping Cart" %}
-          {{ 'Shopping_Cart.png' | file_img_url | img_tag }}
+          {{ 'cart_white.png' | file_img_url | img_tag }}
         {% elsif link.title == "Checkout" %}
-          {{ 'Checkout.png' | file_img_url | img_tag }}
+          {{ 'check_white.png' | file_img_url | img_tag }}
         {% endif %}
         {{ link.title | escape }}
       </a>
