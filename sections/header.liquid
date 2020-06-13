@@ -80,15 +80,15 @@
     <button class="menu-toggle mobileNavBar-link" aria-controls="navBar" aria-expanded="false"><span class="icon icon-hamburger" aria-hidden="true"></span>{{ 'layout.navigation.mobile_menu' | t }}</button>
   </div>
   <div class="display-table-cell">
-    <a href="{{ routes.cart_url }}" class="wishlist-btn cart-toggle">
-      <span class="icon icon-cart">{{ 'large_wishlist_green.png' | file_img_url | img_tag }}</span>
-      <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
-    </a> 
-
     <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle">
       <span class="icon icon-cart">{{ 'large_cart_green.png' | file_img_url | img_tag }}</span>
       <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
     </a>
+
+    <a href="{{ routes.cart_url }}" class="wishlist-btn cart-toggle">
+      <span class="icon icon-cart">{{ 'large_wishlist_green.png' | file_img_url | img_tag }}</span>
+      <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
+    </a> 
   </div>
 </div>
 

@@ -3153,6 +3153,7 @@ $shareBorderColor: #ececec;
     display: block;
     max-width: 100%;
     margin-bottom: $gutter/2;
+    color: black;
   }
 
   input[type="text"],
@@ -3168,6 +3169,11 @@ $shareBorderColor: #ececec;
     line-height: normal;
     border-radius: 5px;
     border-color: transparent;
+
+    @include at-query ($max, $medium) {
+      background-color: transparent;
+    }
+
   }
   input:-ms-input-placeholder {
     line-height: normal;
