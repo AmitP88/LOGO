@@ -2083,7 +2083,7 @@ html input[disabled] {
   display: inline-block;
   // padding: 8px 20px;
   margin: 0;
-  line-height: 1.42;
+  line-height: 0.5; // original: 1.42
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
@@ -3047,11 +3047,16 @@ $shareBorderColor: #ececec;
 }
 
 .header-cart-btn {
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(15%);
+  padding: 5px;
   @extend .btn;
   position: relative;
   // line-height: 26px;
   // padding-bottom: 10px;
   border: 0 none;
+  border-radius: 3px;
   margin-left: $gutter/2;
   vertical-align: top;
   // background-color: $headerButtonAndSearch;
