@@ -3046,6 +3046,34 @@ $shareBorderColor: #ececec;
   padding: 0 5px;
 }
 
+.wishlist-btn {
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(12%);
+  padding: 6px;
+  @extend .btn;
+  position: relative;
+  // line-height: 26px;
+  // padding-bottom: 10px;
+  border: 0 none;
+  border-radius: 3px;
+  margin-left: 25px; // $gutter/2
+  vertical-align: top;
+  // background-color: $headerButtonAndSearch;
+  background-color: #709b1d;
+  color: color-control($headerButtonAndSearch);
+
+  @include at-query ($max, $medium) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: color-control($headerButtonAndSearch);
+    background-color: darken(#709b1d, 5%);
+  }
+}
+
 .header-cart-btn {
   position: relative;
   top: 50%;
@@ -3057,7 +3085,7 @@ $shareBorderColor: #ececec;
   // padding-bottom: 10px;
   border: 0 none;
   border-radius: 3px;
-  margin-left: $gutter/2;
+  margin-left: 9px; // $gutter/2
   vertical-align: top;
   // background-color: $headerButtonAndSearch;
   background-color: #709b1d;
