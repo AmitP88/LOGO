@@ -3104,7 +3104,7 @@ $shareBorderColor: #ececec;
   // margin: 0 auto $gutter;
   height: fit-content; // new
   .icon-search {
-    font-size: 18px;
+    font-size: 23px; // original size: 18px;
     color: #fff;
   }
 
@@ -3116,6 +3116,7 @@ $shareBorderColor: #ececec;
 
   input[type="text"],
   input[type="search"] {
+    background-color: white;
     width: 100%;
     margin-bottom: 0;
     padding: 10px 45px 10px 10px; // 45 is same as submit button width
@@ -3124,6 +3125,7 @@ $shareBorderColor: #ececec;
     font-style: $accentFontStyle;
     font-size: {{ settings.type_button_size }};
     line-height: normal;
+    border-radius: 5px;
   }
   input:-ms-input-placeholder {
     line-height: normal;
@@ -3141,6 +3143,8 @@ $shareBorderColor: #ececec;
     border: 0 none;
     background-color: #709b1d;
     text-align: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     cursor: pointer;
     .site-header & {
       color: color-control(#fff); // default $headerButtonAndSearch
