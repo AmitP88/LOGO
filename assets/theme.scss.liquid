@@ -3105,6 +3105,7 @@ $shareBorderColor: #ececec;
   height: fit-content; // new
   .icon-search {
     font-size: 18px;
+    color: #fff;
   }
 
   @include at-query ($max, $medium) {
@@ -3138,11 +3139,11 @@ $shareBorderColor: #ececec;
     width: 45px;
     margin: 0;
     border: 0 none;
-    background: none;
+    background-color: #709b1d;
     text-align: center;
     cursor: pointer;
     .site-header & {
-      color: color-control($headerButtonAndSearch);
+      color: color-control(#fff); // default $headerButtonAndSearch
     }
   }
 
@@ -3193,10 +3194,11 @@ $shareBorderColor: #ececec;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: $colorNav;
+  background-color: #f3f3f3; // default: $colorNav
 
   a, button {
-    color: $colorNavText;
+    // color: $colorNavText;
+    color: #709b1d;
 
     &:active,
     &:focus {
@@ -3344,7 +3346,7 @@ $shareBorderColor: #ececec;
         color: color-control($colorNav);
       }
       .search-bar--submit .icon {
-        color: color-control($colorNav);
+        color: color-control(#fff); // default: $colorNav
         height: fit-content; // new
       }
     }
