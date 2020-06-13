@@ -2950,7 +2950,8 @@ $shareBorderColor: #ececec;
 .site-header {
   // padding: $gutter/2 0;
   // padding: 15px 0;
-  background-color: $headerBackground;
+  // background-color: $headerBackground;
+  background-color: #fff;
   color: $headerText;
   height: 88px; // new
 
@@ -3202,8 +3203,8 @@ $shareBorderColor: #ececec;
 
 .top-menu {
   // background-color: $colorGreenBackground;
-  // background-color: #709b1d;  // green
-  background-color: blue;
+  background-color: #709b1d;  // green
+  // background-color: blue;
 }
 
 .account-nav {
@@ -3368,8 +3369,12 @@ $shareBorderColor: #ececec;
     justify-content: flex-end;
     .login-or-create {
       display: flex;
+      span {
+        color: #709b1d;
+      }
       p {
         padding: 0 10px;
+        color: black;
       }
     }
   }
