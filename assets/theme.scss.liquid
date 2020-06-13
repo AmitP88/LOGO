@@ -3064,7 +3064,11 @@ $shareBorderColor: #ececec;
   color: color-control($headerButtonAndSearch);
 
   @include at-query ($max, $medium) {
-    display: none;
+    background-color: #fff;
+    transform: perspective(1px) translateY(0%);
+    padding: 5px;
+    float: right;
+    margin-left: 9px;
   }
 
   &:hover,
@@ -3092,7 +3096,10 @@ $shareBorderColor: #ececec;
   color: color-control($headerButtonAndSearch);
 
   @include at-query ($max, $medium) {
-    display: none;
+    background-color: #fff;
+    transform: perspective(1px) translateY(0%);
+    float: right;
+    margin-left: 9px;
   }
 
   &:hover,
