@@ -3171,7 +3171,7 @@ $shareBorderColor: #ececec;
     border-color: transparent;
 
     @include at-query ($max, $medium) {
-      background-color: transparent;
+      // background-color: transparent;
     }
 
   }
@@ -3392,10 +3392,10 @@ $shareBorderColor: #ececec;
       // padding: 15px 0; // new
       width: auto;
       input[type="search"]::-webkit-input-placeholder {
-        color: color-control($colorNav);
+        color: color-control(black); // default $colorNav
       }
       input::-webkit-input-placeholder {
-        color: color-control($colorNav);
+        color: color-control(black); // default $colorNav
       }
       .search-bar--submit .icon {
         color: color-control(#fff); // default: $colorNav
@@ -6181,3 +6181,18 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   line-height: 1.1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#navBar ::placeholder{color: black !important;}
+#navBar .search-bar [type="search"]{ background-color: white;}
