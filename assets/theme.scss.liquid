@@ -1594,7 +1594,9 @@ $class-type: unquote(".");
 html, body {
   padding: 0;
   margin: 0;
-  background-color: $colorBody;
+  // background-color: $colorBody;
+  background-image: url({{ 'main_bg.jpg' | file_img_url }});
+  background-size: cover;
   &.js {
      .no-js {
        display: block;
@@ -2954,7 +2956,7 @@ $shareBorderColor: #ececec;
   background-color: #fff;
   color: $headerText;
   height: 88px; // new
-
+  margin-bottom: 2px;
   .wrapper {
     position: relative;
     top: 50%;
