@@ -6241,10 +6241,16 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   background: #FFFFFF url(//gtranslate.io/shopify/assets/switcher.png) repeat-x;
   position: relative;
   z-index: 9999;
+  display: flex;
 }
 
-.switcher .selected a {
-  background: #fff !important;
+
+
+.arrow_down {
+  height: 8px;
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(50%);
 }
 
 .switcher .option {
@@ -6255,10 +6261,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .switcher .selected a {
   // border: 1px solid #CCCCCC;
-  background: url(//gtranslate.io/shopify/assets/arrow_down.png) 146px center no-repeat;
+  background: #fff;
   color: #666666;
   // padding: 3px 5px;
-  width: 114px;
+  width: 71px;
 }
 
 .switcher .selected a.open {

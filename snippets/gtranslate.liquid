@@ -1,7 +1,11 @@
 <!-- GTranslate: https://gtranslate.io/ -->  
   <div class="switcher notranslate">
     <div class="selected">
-      <a href="#" onclick="return false;"><img src="//gtranslate.io/shopify/assets/flags/16/en.png" height="16" width="16" alt="en" /> English</a>
+      <a href="#" onclick="return false;">
+        <img src="//gtranslate.io/shopify/assets/flags/16/en.png" height="16" width="16" alt="en" />
+        English
+      </a>
+      <img src="{{ 'arrow_down.png' | file_img_url }}" class="arrow_down" alt="arrow_down">   
     </div>
     <div class="option">
       <a href="#" onclick="doGTranslate('en|en');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;" title="English" class="nturl selected">
