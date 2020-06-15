@@ -6244,13 +6244,12 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .language_name {
-  // padding-left: 4.29px;
-  // padding-right: 7px;
   margin: 0;
   padding: 0;
   width: 62px;
   text-align: center;
   line-height: 35px;
+  color: #709b1d;
 }
 
 .switcher .selected {
@@ -6259,8 +6258,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   z-index: 9999;
   display: flex;
   justify-content: center;
-  // padding-top: 12px;
   height: 35px;
+  border-bottom: 2px solid #d9d9d9;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 
@@ -6269,15 +6270,13 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   height: 8px;
   position: relative;
   top: 50%;
-  transform: perspective(1px) translateY(-40%); // default: translateY(50%)
+  transform: perspective(1px) translateY(-40%);
 }
 
 .switcher .selected a {
-  // border: 1px solid #CCCCCC;
   background: #ffffff 146px center no-repeat;
   color: #666666;
-  // padding: 3px 5px;
-  width: fit-content; // fit-content
+  width: fit-content;
 }
 
 .switcher .selected a.open {
