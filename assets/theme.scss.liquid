@@ -6220,7 +6220,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .switcher a {
   text-decoration: none;
-  display: block;
+  display: flex; // default: block
   font-size: 10pt;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -6241,8 +6241,12 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .language_name {
-  padding-left: 4.29px;
-  padding-right: 7px;
+  // padding-left: 4.29px;
+  // padding-right: 7px;
+  margin: 0;
+  padding: 0;
+  width: 62px;
+  text-align: center;
 }
 
 .switcher .selected {
@@ -6250,6 +6254,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   position: relative;
   z-index: 9999;
   display: flex;
+  justify-content: center;
 }
 
 
