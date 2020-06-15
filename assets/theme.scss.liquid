@@ -6211,7 +6211,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   text-align: left;
   cursor: pointer;
   overflow: hidden;
-  width: 116px;
+  width: fit-content;
   line-height: 17px;
 }
 
@@ -6253,18 +6253,12 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   transform: perspective(1px) translateY(50%);
 }
 
-.switcher .option {
-  position: absolute !important;
-  background-color: #ffffff !important;
-  width: 115px !important;
-}
-
 .switcher .selected a {
   // border: 1px solid #CCCCCC;
   background: #ffffff 146px center no-repeat;
   color: #666666;
   // padding: 3px 5px;
-  width: 71px;
+  width: fit-content;
 }
 
 .switcher .selected a.open {
@@ -6276,14 +6270,14 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .switcher .option {
-  position: relative;
+  position: absolute;
   z-index: 9998;
   border-left: 1px solid #CCCCCC;
   border-right: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
-  background-color: #EEEEEE;
+  background-color: #ffffff;
   display: none;
-  width: 161px;
+  width: fit-content;
   max-height: 198px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
