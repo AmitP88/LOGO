@@ -6210,9 +6210,12 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   font-size: 10pt;
   text-align: left;
   cursor: pointer;
-  overflow: hidden;
+  // overflow: hidden;
   width: fit-content;
   line-height: 17px;
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-40%);
 }
 
 .switcher a {
@@ -6235,6 +6238,11 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .switcher a:hover img {
   opacity: 1;
+}
+
+.language_name {
+  padding-left: 4.29px;
+  padding-right: 7px;
 }
 
 .switcher .selected {
