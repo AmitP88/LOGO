@@ -6215,7 +6215,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   line-height: 17px;
   position: relative;
   top: 50%;
-  transform: perspective(1px) translateY(-40%);
+  transform: perspective(1px) translateY(-7%); // default: translateY(-40%)
 }
 
 .switcher a {
@@ -6234,6 +6234,9 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   padding: 0;
   margin: 0;
   opacity: 0.8;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .switcher a:hover img {
@@ -6247,6 +6250,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   padding: 0;
   width: 62px;
   text-align: center;
+  line-height: 35px;
 }
 
 .switcher .selected {
@@ -6255,6 +6259,8 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   z-index: 9999;
   display: flex;
   justify-content: center;
+  // padding-top: 12px;
+  height: 35px;
 }
 
 
@@ -6263,7 +6269,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   height: 8px;
   position: relative;
   top: 50%;
-  transform: perspective(1px) translateY(50%);
+  transform: perspective(1px) translateY(-40%); // default: translateY(50%)
 }
 
 .switcher .selected a {
@@ -6303,6 +6309,19 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   color: #000;
   padding: 5px 0px;
   justify-content: center;
+  img {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);    
+  }
+}
+
+.switcher .option a:first-child {
+  img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .switcher .option a:hover {
