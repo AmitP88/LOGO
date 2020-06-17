@@ -6374,16 +6374,16 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   #to make the theme wider
 ==============================================================================*/
 .template-index main.wrapper { 
-  max-width:100%;
-  padding:0;
+  max-width: 100%;
+  padding: 0;
 }
 
 .template-index main.wrapper>* {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  padding-left:30px;
-  padding-right:30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 #shopify-section-slideshow {
@@ -6393,20 +6393,55 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .flexslider .slides img {
-  width:100%;
+  width: 100%;
   padding-top: 250px;
 }
 
 
 @include at-query ($min, $large) {
-  .flexslider:hover .flex-prev {
+  .slides {
+    transition-duration: 0s;
+    /* transform: translate3d(-1079px, 0px, 0px); */
+  }
+
+  .flex-direction-nav a {
+    opacity: 1;
+  }
+
+  .flex-prev {
     opacity: 1;
     left: 0px; // default: -45px
+  }
+
+  .flex-next {
+    opacity: 1;
+    right: 0px; // default: -25px
+  }  
+
+  .flex-direction-nav .flex-prev {
+    left: 0px; // default: 10px
+  }
+
+  .flexslider:hover .flex-prev {
+    opacity: 1;
+    left: 0px;
+  }
+
+
+  .flex-direction-nav .flex-next {
+    right: 0px; // default: 10px
   }
 
   .flexslider:hover .flex-next {
     opacity: 1;
     right: 0px; // default: -25px
-  }  
+  }
+
+
+
+
+
+
+
 }
 
