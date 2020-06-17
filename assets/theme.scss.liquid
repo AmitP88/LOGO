@@ -6364,3 +6364,49 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
   background-color: #888;
 }
+
+
+
+
+
+
+/*============================================================================
+  #to make the theme wider
+==============================================================================*/
+.template-index main.wrapper { 
+  max-width:100%;
+  padding:0;
+}
+
+.template-index main.wrapper>* {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+#shopify-section-slideshow {
+  max-width: 100%;
+  width: 100%;
+  padding: 0px;
+}
+
+.flexslider .slides img {
+  width:100%;
+  padding-top: 250px;
+}
+
+
+@include at-query ($min, $large) {
+  .flexslider:hover .flex-prev {
+    opacity: 1;
+    left: 0px; // default: -45px
+  }
+
+  .flexslider:hover .flex-next {
+    opacity: 1;
+    right: 0px; // default: -25px
+  }  
+}
+
