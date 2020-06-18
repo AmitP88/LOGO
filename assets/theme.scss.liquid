@@ -6477,13 +6477,51 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   background-position: center right;
 }
 
+// Slider background
 #shopify-section-slideshow {
   // background-color: rgba(88,88,88,0.1);
   background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/slider_bg_2048w.jpg?v=1592470042');
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 1px;
 }
 
 .placeholder-noblocks.slide-link {
   background-color: transparent !important;
+}
+
+// Slider dots
+.flex-control-nav {
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex-control-nav li {
+  margin: 0 3px !important;
+}
+
+.flex-control-paging li a {
+  width: 21px;
+  height: 17px;
+  // border-radius: 2px !important;
+  border-top-left-radius: 2px !important;
+  border-top-right-radius: 2px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  background-color: #709b1d;
+  border: none;
+}
+
+.flex-control-paging li a:hover {
+  background-color: #709b1d;
+}
+
+.flex-control-paging li a.flex-active {
+  background-color: #4b6e08;
+  border: none;
 }
