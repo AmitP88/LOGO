@@ -3066,7 +3066,7 @@ $shareBorderColor: #ececec;
   color: color-control($headerButtonAndSearch);
 
   @include at-query ($max, $medium) {
-    background-color: #fff;
+    background-color: #709b1d;
     padding: 5px;
     float: right;
     margin-left: 9px;
@@ -3098,10 +3098,11 @@ $shareBorderColor: #ececec;
   color: color-control($headerButtonAndSearch);
 
   @include at-query ($max, $medium) {
-    background-color: #fff;
+    background-color: #709b1d;
     transform: perspective(1px) translateY(12%);
     float: right;
     margin-left: 9px;
+    padding: 4px;
   }
 
   &:hover,
@@ -3358,7 +3359,11 @@ $shareBorderColor: #ececec;
     display: none;
   }
 
-  .login-cart { // new
+  .grid--full {
+    display: flex;
+  }
+
+  .login-or-create { // new
     display: none;
   }
   .nav-bar {
