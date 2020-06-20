@@ -3,13 +3,13 @@
     <li>
       <a href="{{ link.url }}">
         {% if link.title == "Home" %}
-          {{ 'Home_white.png' | file_img_url | img_tag }}
+          {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Home_white.png?v=1592002592' | img_tag }}
         {% elsif link.title == "My Account" %}
-          {{ 'account_white.png' | file_img_url | img_tag }}
+          {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/account_white.png?v=1592002848' | img_tag }}
         {% elsif link.title == "Shopping Cart" %}
-          {{ 'cart_white.png' | file_img_url | img_tag }}
+          {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_white.png?v=1592002848' | img_tag }}
         {% elsif link.title == "Checkout" %}
-          {{ 'check_white.png' | file_img_url | img_tag }}
+          {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/check_white.png?v=1592002848' | img_tag }}
         {% endif %}
         {{ link.title | escape }}
       </a>

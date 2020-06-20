@@ -11,7 +11,7 @@
     <div class="grid--full">
       <div class="grid-item large--one-half">
         <a href="/">
-          {{ 'mockup_logo.png' | file_img_url | img_tag }}
+          {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/mockup_logo.png?v=1592006031' | img_tag }}
         </a>
       </div>
 
@@ -59,12 +59,12 @@
           </div>
 
           <a href="{{ routes.cart_url }}" class="wishlist-btn cart-toggle">
-            <span class="icon icon-cart">{{ 'wishlist.png' | file_img_url | img_tag }}</span>
+            <span class="icon icon-cart">{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist.png?v=1592033188' | img_tag }}</span>
             <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count | prepend: '00' | slice: -2, 2  }}</span>
           </a> 
 
           <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle">
-            <span class="icon icon-cart">{{ 'large_cart.png' | file_img_url | img_tag }}</span>
+            <span class="icon icon-cart">{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/large_cart.png?v=1592026541' | img_tag }}</span>
             <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count | prepend: '00' | slice: -2, 2  }}</span>
           </a>          
         </div>
