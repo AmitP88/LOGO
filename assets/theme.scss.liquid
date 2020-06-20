@@ -3134,18 +3134,13 @@ $shareBorderColor: #ececec;
   right: -7px;
 }
 
-.search-wrapper {
-
-}
-
 .search-bar {
   position: relative;
   max-width: 60%;
-  width: 100%;
-  // margin: 0 auto $gutter;
-  height: fit-content; // new
+  width: 247px;
+  height: 29px;
   .icon-search {
-    font-size: 23px; // original size: 18px;
+    font-size: 18px; // original size: 18px;
     color: #fff;
   }
 
@@ -3161,15 +3156,17 @@ $shareBorderColor: #ececec;
     background-color: white;
     width: 100%;
     margin-bottom: 0;
-    padding: 10px 45px 10px 10px; // 45 is same as submit button width
+    padding: 0px;
+    // padding: 10px 45px 10px 10px; // 45 is same as submit button width
     font-family: $accentFontStack;
     font-weight: $accentFontWeight;
     font-style: $accentFontStyle;
     font-size: {{ settings.type_button_size }};
     line-height: normal;
-    border-radius: 5px;
+    border-radius: 3px;
     border-color: transparent;
     outline: none;
+    height: 29px;
     @include at-query ($max, $medium) {
       // background-color: transparent;
     }
@@ -3182,17 +3179,18 @@ $shareBorderColor: #ececec;
 
   input[type="submit"],
   .search-bar--submit {
+    padding: 0;
     position: absolute;
-    top: 2px;
+    top: 0px; // 2px
     bottom: 0;
     right: 0;
-    width: 45px;
+    width: 29px;
     margin: 0;
     border: 0 none;
     background-color: #709b1d;
     text-align: center;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     cursor: pointer;
     .site-header & {
       color: color-control(#fff); // default $headerButtonAndSearch
@@ -3396,10 +3394,7 @@ $shareBorderColor: #ececec;
     }
 
     .search-bar {
-      // margin: 0 $gutter/2 $gutter/2;
-      margin: 0 15px;
-      // padding: 15px 0; // new
-      width: auto;
+      margin: 0 auto;
       input[type="search"]::-webkit-input-placeholder {
         color: color-control(black); // default $colorNav
       }
@@ -6209,7 +6204,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 
 #navBar ::placeholder{color: #898888 !important;}
-#navBar .search-bar [type="search"]{ background-color: white;}
+#navBar .search-bar [type="search"]{ background-color: white; padding-left: 12px }
 
 
 /*==============================================================================
