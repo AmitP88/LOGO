@@ -6652,3 +6652,26 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     margin-bottom: 0px;
   }
 }
+
+// cell content
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: inherit;
+}
+
+.cell-icon, .cell-text {
+  height: fit-content;
+  width: min-content;
+}
+
+.cell-icon {
+  padding-left: 15px;
+}
+
+.grid-wrapper .grid-cell:nth-child(1) {
+  .cell-icon {
+    padding-right: 12px;
+  }
+}
