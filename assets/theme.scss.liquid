@@ -6559,28 +6559,42 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   position: relative;
   width: 100%;
   height: 95px;
+  padding: 0px 10px;
   background-color: #709b1d;
   @include at-query ($max, $medium) {
-    grid-template-columns: 219px;
+    grid-template-columns: 1fr;
     width: 100vw;
     height: auto;
+    padding: 10px 0px;
   }
 }
 
 .grid-wrapper {
   display: grid;
-  grid-template-columns: 219px 219px 219px 219px;
-  grid-column-gap: 21px;
-  width: 940px;
   margin: 0 auto;
+
+  @include at-query ($max, 500px) {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include at-query ($min, 500px) {
+    grid-template-columns: 1fr 1fr;
+    // grid-column-gap: 21px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
   @include at-query ($min, $large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 21px;
+    width: 940px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);    
-  }
-  @include at-query ($max, $medium) {
-    grid-template-columns: 219px;
-    width: 100vw;
   }
 }
 
@@ -6595,4 +6609,20 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   width: 219px;
   height: 73px;
   border-bottom: 3px solid #658c19;
+  @include at-query ($max, $medium) {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+.grid-wrapper .grid-cell:nth-child(3) {
+  @include at-query ($min, 500px) {
+    margin-bottom: 0px;
+  }
+}
+
+.grid-wrapper .grid-cell:last-child {
+  @include at-query ($max, $large) {
+    margin-bottom: 0px;
+  }
 }
