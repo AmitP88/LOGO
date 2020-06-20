@@ -3,7 +3,8 @@
 
   <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'layout.search_bar.placeholder' | t }}" aria-label="{{ 'layout.search_bar.placeholder' | t }}">
   <button type="submit" class="search-bar--submit icon-fallback-text">
-    <span class="icon icon-search" aria-hidden="true"></span>
+    <!-- <span class="icon icon-search" aria-hidden="true"></span> -->
+    <img class="icon icon-search" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/magnifying_glass.png?v=1592659469' }}" alt='glass' />
     <span class="fallback-text">{{ 'layout.search_bar.submit' | t }}</span>
   </button>
 </form>
