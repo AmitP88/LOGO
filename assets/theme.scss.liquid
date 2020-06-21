@@ -6541,12 +6541,29 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 
 .collection-list {
-  background-color: lightgray;
+  background-color: #709b1d;
+  height: 40px;
 }
 
 
+.template-index main.wrapper>* {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 940px;
+}
+
 #shopify-section-collection-list {
   margin-top: 181px;
+  height: 477px;
+  background-color: azure;
+  @include at-query ($max, 1023px) {
+    margin-top: 15%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1023px) {
+    margin-top: 30%;
+  }
 }
 
 /*============================================================================
