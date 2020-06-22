@@ -1,7 +1,7 @@
 <div class="collection-list">
   <!-- Tab Links -->
   <div class="tab">
-    <button class="tablinks" onClick="openCity(event, 'London')">London</button>
+    <button class="tablinks active" onClick="openCity(event, 'London')" id="defaultOpen">London</button>
     <button class="tablinks" onClick="openCity(event, 'Paris')">Paris</button>
     <button class="tablinks" onClick="openCity(event, 'Tokyo')">Tokyo</button>
   </div>
@@ -29,7 +29,10 @@
 
 
 
-
+<script>
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
 
 
 
