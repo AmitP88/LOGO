@@ -1,46 +1,78 @@
-<div class="collection-list">
-  <!-- Tab Links -->
-  <div class="tab">
-    <button class="prev">Prev</button>
-    <button class="tablinks active" onClick="openCity(event, 'Fetured')" id="defaultOpen">Fetured</button>
-    <button class="tablinks" onClick="openCity(event, 'New Itme')">New Itme</button>
-    <button class="tablinks" onClick="openCity(event, 'Top Seller')">Top Seller</button>
-    <button class="tablinks" onClick="openCity(event, 'Top Ratting')">Top Ratting</button>
-    <button class="next">Next</button>
-  </div>
+<style>
+  .tabcontent { display: none;}
+  .tabcontent .active{display: block; display: show ;}
+</style>
 
-  <!-- Tab Content -->
-  <div id="Fetured" class="tabcontent">
-    <h3>Fetured</h3>
-    <p>London is the capital city of England.</p>
+<div class="container text-center">
+  <h1>Tabs with buttons</h1>
+  <button class="float-left btn bg-primary" onclick="prev()">Previous </button>
+  <button class="btn btn-primary float-right" onclick="next()">Next</button>
+  <nav class="multiTabs">
+      <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content1'>Tab1</a>
+      <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content2'>Tab2</a>
+      <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content3'>Tab3</a>
+      <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content4'>Tab4</a>
+      <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content5'>Tab5</a>
+  </nav>
+   
+   
+  <!-- content  -->
+  <div class="tabcontent active bg-light" id="content1">
+      <h1>Tab1</h1>
+      <p>This is some text about tab1</p>
   </div>
-  
-  <div id="New Itme" class="tabcontent">
-    <h3>New Itme</h3>
-    <p>Paris is the capital of France.</p> 
+  <div class="tabcontent bg-light" id="content2">
+      <h1>Tab2</h1>
+      <p>This is some text about tab2</p>
   </div>
-  
-  <div id="Top Seller" class="tabcontent">
-    <h3>Top Seller</h3>
-    <p>Tokyo is the capital of Japan.</p>
+  <div class="tabcontent  bg-light" id="content3">
+      <h1>Tab3</h1>
+      <p>This is some text about tab3</p>
   </div>
-
-  <div id="Top Ratting" class="tabcontent">
-    <h3>Top Ratting</h3>
-    <p>Tokyo is the capital of Japan.</p>
+  <div class="tabcontent  bg-light" id="content4">
+      <h1>Tab4</h1>
+      <p>This is some text about tab4</p>
   </div>
-
-  {{ 'tabs.js' | asset_url | script_tag }}
-
+  <div class="tabcontent bg-light" id="content5">
+      <h1>Tab5</h1>
+      <p>This is some text about tab5</p>
+  </div>
 </div>
 
+  <script>
+    var currentTab = 1;
+    $("#contetn1").show();
 
+    $(document).on('click', 'nav.multiTabs>a',
+    function(){
+        var TabId = $(this).attr('data-trigger');
+        $('div#'+TabId+' ').show();
+          
+        console.log("Current Tab: " + TabId);
+        currentTab = parseInt(TabId.replace("content", ""));
 
+        $('.tabcontent:not(#'+TabId+')').hide()
 
-<script>
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
-</script>
+    });
+      
+    function next(){
+        if(currentTab < 5){
+            $(".tabcontent").hide();
+            currentTab++;
+            $("#content"+(currentTab)).show();
+        }
+    }
+      
+    function prev(){
+        if(currentTab > 1){
+            $(".tabcontent").hide();
+            currentTab--;
+            $("#content" + (currentTab)).show();
+        }
+    }
+  </script>
+
+</div>
 
 
 
