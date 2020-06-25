@@ -3715,18 +3715,37 @@ $shareBorderColor: #ececec;
 footer {
   .middle {
     height: 52px;
+    flex-direction: row;
     background-color: #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include at-query ($max, $medium) {
+      height: auto;
+      padding: 5%;
+      flex-direction: column;
+    }
+
     .we_accept {
       height: 32px;
       width: 119px;
+      margin-right: 10px;
       background-color: #709b1d;
       border-radius: 3px;
       border-bottom: 3px solid #5b8112;
       img {
         padding: 9px 15px 8px 13px;        
+      }
+    }
+    .credit_cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin: 0 5px;
+      }
+      @include at-query ($max, $medium) {
+        margin: 5%;
       }
     }
   }
