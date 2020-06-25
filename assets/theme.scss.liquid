@@ -3753,11 +3753,25 @@ footer {
       line-height: 14px;
       border-radius: 3px;
       border-bottom: 3px solid #5b8112;
+      margin-right: 14.5px;
+      @include at-query ($min, 1024px) {
+        margin-left: 70px;
+      }
       img {
         padding: 9px 20px 8px 19px;
       }
     }
-
+    .social_media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin: 0 4.5px;
+      }
+      @include at-query ($max, $medium) {
+        margin: 5%;
+      }
+    }
 
 
   }
