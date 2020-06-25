@@ -3715,11 +3715,10 @@ $shareBorderColor: #ececec;
 footer {
   .top {
       background-color: #f1f1f1;
-      height: 251px;
       .container {
         height: 152px;
-        margin-top: 58px;
-        margin-bottom: 41px;
+        margin-top: 40px;
+        margin-bottom: 20px;
         .heading {
           height: 25px;
           .title {
@@ -3759,10 +3758,11 @@ footer {
       flex-direction: column;
       .container {
         width: 100%;
-        border: 1px solid red;
       }
     }
+
     @include at-query ($min, $large) {
+      height: 251px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -3770,6 +3770,8 @@ footer {
         width: 221px;
         border: none;
         margin-right: 20px;
+        margin-top: 58px;
+        margin-bottom: 41px;
       }
       .container:last-child {
         margin-right: 0;
