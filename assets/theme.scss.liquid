@@ -6724,33 +6724,3 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   # Collection-List (Tabs)
 ==============================================================================*/
 
-.tabs-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;  
-  background-color: #709b1d;
-  height: 40px;
-}
-
-.btn-primary {
-  background-color: white;
-  padding: 0;
-  height: fit-content;
-  width: fit-content;
-}
-
-.arrow-left {
-  margin-left: 4px;
-  padding: 5px 9px 5px 8px;
-  @include at-query ($max, $small) {
-    display: none;
-  }
-}
-
-.arrow-right {
-  margin-right: 5px;
-  padding: 5px 8px 5px 9px;
-  @include at-query ($max, $small) {
-    display: none;
-  }
-}
