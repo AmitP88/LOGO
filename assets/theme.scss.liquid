@@ -3717,16 +3717,40 @@ footer {
       background-color: #f1f1f1;
       height: 251px;
       .container {
+        height: 152px;
+        margin-top: 58px;
+        margin-bottom: 41px;
         .heading {
           height: 25px;
+          .title {
+            margin-bottom: 11px;
+          }
           .underline {
             position: relative;
             top: -70%;
           }
         }
         .list {
+          margin-top: 16px;
           li {
             display: flex;
+            margin: 0;
+            margin-bottom: 16px;
+            .bullet {
+              margin-right: 12px;
+            }
+            .map {
+              width: 10px;
+              height: 16px;
+            }
+            .mobile {
+              width: 7px;
+              height: 14px;
+            }
+            .email {
+              width: 12px;
+              height: 8px;
+            }
           }
         }
       }
@@ -3735,19 +3759,21 @@ footer {
       flex-direction: column;
       .container {
         width: 100%;
-        height: 25%;
         border: 1px solid red;
       }
     }
     @include at-query ($min, $large) {
       display: flex;
       flex-direction: row;
-      padding: 0 8%;
+      justify-content: center;
       .container {
-        width: 25%;
-        height: 100%;
-        border: 1px solid red;
-      }      
+        width: 221px;
+        border: none;
+        margin-right: 20px;
+      }
+      .container:last-child {
+        margin-right: 0;
+      }
     }
   }
   .middle {
