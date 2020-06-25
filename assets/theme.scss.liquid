@@ -3716,6 +3716,15 @@ footer {
   .top {
       background-color: #f1f1f1;
       height: 251px;
+      .container {
+        .heading {
+          height: 25px;
+          .underline {
+            position: relative;
+            top: -70%;
+          }
+        }
+      }
     @include at-query ($min, 320px) {
       display: flex;
       flex-direction: column;
@@ -3728,7 +3737,7 @@ footer {
     @include at-query ($min, $large) {
       display: flex;
       flex-direction: row;
-      margin: 0 8%;
+      padding: 0 8%;
       .container {
         width: 25%;
         height: 100%;
