@@ -3712,50 +3712,12 @@ $shareBorderColor: #ececec;
 /*============================================================================
   #Site Footer
 ==============================================================================*/
-.site-footer {
-  background-color: $colorFooterBg;
-  padding: $gutter 0 10px;
-  color: $colorFooterText;
-
-  @include at-query ($min, $large) {
-    padding: $gutter*2 0 $gutter/5;
-  }
-
-  h3 {
-    margin: 0 0 $gutter/2 0;
-  }
-
-  a {
-    color: $colorFooterText;
-
-    &:hover {
-      color: darken($colorFooterText, 20%);
-    }
-  }
-
-  .site-footer__newsletter-subtext a {
-    color: $colorLink;
-
-    &:hover {
-      color: $colorLinkHover;
-    }
-  }
-}
-
-.legal-links {
-  margin-bottom: 0;
-
-  @include at-query($max, $medium) {
-    margin-bottom: $gutter/2;
-  }
-
-  & + & {
-    margin-bottom: $gutter/2;
-  }
-
-  li {
-    padding: 0 $gutter/2 0 0;
-    font-size: 13px;
+footer {
+  .bottom {
+    text-align: center;
+    color: #c5ec78;
+    background-color: #709b1d;
+    padding: 15px 0;
   }
 }
 
@@ -4555,6 +4517,12 @@ a.remove {
 .flexslider {
   margin: 0 0 $gutter*1.5;
   padding: 0;
+  @include at-query ($min, 320px) {
+    height: 261px;
+  }
+  @include at-query ($min, $medium) {
+    height: 461px;
+  }
 }
 .flexslider li { margin: 0; max-width: 100%; }
 .flexslider .slides > li {
