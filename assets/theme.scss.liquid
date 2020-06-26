@@ -3714,14 +3714,16 @@ $shareBorderColor: #ececec;
   # Brands
 ==============================================================================*/
 .brands {
-  background-color: azure;
+  background-color: transparent;
   height: 135px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
-
+  .brands-container {
+    width: 100%;
+  }
   .brands-button {
     display: flex;
     justify-content: center;
@@ -3739,7 +3741,7 @@ $shareBorderColor: #ececec;
     display: flex;
     justify-content: center;
     .brand {
-      margin: 0;
+      margin: 0 10px;
       img {
         height: fit-content;
         margin: 0;
