@@ -170,11 +170,7 @@
       }
     },
     "content_for_index": [
-      "slideshow",
-      "collection-list",
-      "collection-row-1",
-      "collection-row-2",
-      "collection-row-3"
+      "slideshow"
     ]
   },
   "presets": {
