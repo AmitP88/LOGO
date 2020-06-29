@@ -173,12 +173,16 @@
       },
       "product_tabs_4": {
         "type": "product_tabs_4"
+      },
+      "promo": {
+        "type": "promo"
       }
     },
     "content_for_index": [
       "slideshow",
       "delivery-bar",
-      "product_tabs_4"
+      "product_tabs_4",
+      "promo"
     ]
   },
   "presets": {
