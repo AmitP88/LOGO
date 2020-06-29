@@ -170,11 +170,15 @@
       },
       "delivery-bar": {
         "type": "delivery-bar"
+      },
+      "product_tabs_4": {
+        "type": "product_tabs_4"
       }
     },
     "content_for_index": [
       "slideshow",
-      "delivery-bar"
+      "delivery-bar",
+      "product_tabs_4"
     ]
   },
   "presets": {
