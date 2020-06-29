@@ -167,10 +167,14 @@
           "grid": 4,
           "rows": 1
         }
+      },
+      "delivery-bar": {
+        "type": "delivery-bar"
       }
     },
     "content_for_index": [
-      "slideshow"
+      "slideshow",
+      "delivery-bar"
     ]
   },
   "presets": {
