@@ -182,6 +182,9 @@
       },
       "product_tabs_1_laptop": {
         "type": "product_tabs_1_laptop"
+      },
+      "product_tabs_1_desktop": {
+        "type": "product_tabs_1_desktop"
       }
     },
     "content_for_index": [
@@ -190,7 +193,8 @@
       "product_tabs_4",
       "promo",
       "subscribe",
-      "product_tabs_1_laptop"
+      "product_tabs_1_laptop",
+      "product_tabs_1_desktop"
     ]
   },
   "presets": {
