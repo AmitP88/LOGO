@@ -179,6 +179,9 @@
       },
       "subscribe": {
         "type": "subscribe"
+      },
+      "product_tabs_1_laptop": {
+        "type": "product_tabs_1_laptop"
       }
     },
     "content_for_index": [
@@ -186,7 +189,8 @@
       "delivery-bar",
       "product_tabs_4",
       "promo",
-      "subscribe"
+      "subscribe",
+      "product_tabs_1_laptop"
     ]
   },
   "presets": {
