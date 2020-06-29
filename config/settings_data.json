@@ -176,13 +176,17 @@
       },
       "promo": {
         "type": "promo"
+      },
+      "subscribe": {
+        "type": "subscribe"
       }
     },
     "content_for_index": [
       "slideshow",
       "delivery-bar",
       "product_tabs_4",
-      "promo"
+      "promo",
+      "subscribe"
     ]
   },
   "presets": {
