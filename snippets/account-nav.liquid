@@ -4,6 +4,7 @@
       <a href="{{ link.url }}">
         {% if link.title == "Home" %}
           {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Home_green.png?v=1592005625' | img_tag }}
+          {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Home_green_46645761-0d17-448c-b8b7-350cb8591852.png?v=1593520852' | img_tag }}
         {% elsif link.title == "My Account" %}
           {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/account_white.png?v=1592002848' | img_tag }}
         {% elsif link.title == "Shopping Cart" %}
@@ -11,7 +12,7 @@
         {% elsif link.title == "Checkout" %}
           {{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/check_white.png?v=1592002848' | img_tag }}
         {% endif %}
-        {{ link.title | escape }}
+        <!-- {{ link.title | escape }} -->
       </a>
     </li>
   {% endfor %}
