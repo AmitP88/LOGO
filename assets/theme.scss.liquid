@@ -3358,6 +3358,13 @@ $shareBorderColor: #ececec;
   }
 }
 
+.site-nav li:first-child {
+  a {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .site-nav li:nth-child(2) {
   line-height: 28px;
   a {
@@ -3376,12 +3383,7 @@ $shareBorderColor: #ececec;
   }
 }
 
-.site-nav li:first-child {
-  a {
-    padding-left: 15px;
-    padding-right: 30px;
-  }
-}
+
 
 /*================ Small screen nav styles ================*/
 @include at-query ($max, $small) {
