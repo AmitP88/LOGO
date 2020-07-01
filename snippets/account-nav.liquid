@@ -4,16 +4,20 @@
       <a href="{{ link.url }}">
         {% if link.title == "Home" %}
           <img class="icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Home_green.png?v=1592005625' }}" alt="icon">
-          <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Home_green_46645761-0d17-448c-b8b7-350cb8591852.png?v=1593520852' }}" alt="nav-item">
+          <!-- <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Home_green_46645761-0d17-448c-b8b7-350cb8591852.png?v=1593520852' }}" alt="nav-item"> -->
+          {{ link.title | escape }}
         {% elsif link.title == "My Account" %}
           <img class="icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/account_white.png?v=1592002848' }}" alt="icon">
-          <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/MY_ACCOUNT_551ffab5-0fc6-4b28-b19d-b6ac71ea1ea0.png?v=1593535035' }}" alt="nav-item" >
+          <!-- <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/MY_ACCOUNT_551ffab5-0fc6-4b28-b19d-b6ac71ea1ea0.png?v=1593535035' }}" alt="nav-item" > -->
+          {{ link.title | escape }}
         {% elsif link.title == "Shopping Cart" %}
           <img class="icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_white.png?v=1592002848' }}" alt="icon">
-          <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/SHOPPING_CART.png?v=1593535348' }}" alt="nav-item">
+          <!-- <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/SHOPPING_CART.png?v=1593535348' }}" alt="nav-item"> -->
+          {{ link.title | escape }}
         {% elsif link.title == "Checkout" %}
           <img class="icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/check_white.png?v=1592002848' }}" alt="icon">
-          <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/CHECKOUT.png?v=1593535681' }}" alt="nav-item">
+          <!-- <img class="nav-item" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/CHECKOUT.png?v=1593535681' }}" alt="nav-item"> -->
+          {{ link.title | escape }}
         {% endif %}
         <!-- {{ link.title | escape }} -->
       </a>

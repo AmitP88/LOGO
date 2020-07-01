@@ -80,19 +80,7 @@
           class="site-nav--link"
           data-meganav-type="child"
           {% unless request.page_type == 'index' %}{% if link.active %}aria-current="page"{% endif %}{% endunless%}>
-          {% if link.title == "Smart Phone" %}
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/SMART_PHONE.png?v=1593549192' }}" alt="smartphone">
-          {% elsif link.title == "Dasktop" %}
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/DASKTOP.png?v=1593549192' }}" alt="Dasktop">
-          {% elsif link.title == "Laptop" %}
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/LAPTOP.png?v=1593549192' }}" alt="Laptop">
-          {% elsif link.title == "Accessories" %}
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/ACCESSORIES.png?v=1593549192' }}" alt="Accessories">
-          {% elsif link.title == "Networking" %}
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/NETWORKING.png?v=1593549192' }}" alt="Networking">
-          {% elsif link.title == "Software" %}
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/SOFTWARE.png?v=1593549192' }}" alt="Software">
-          {% endif %}
+            {{ link.title | escape }}
         </a>
       </li>
     {% endif %}
