@@ -7142,14 +7142,26 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       }
     }
   }
+
+  .buttons_bar {
+    display: none;
+  }
 }
 
 
 
 
-.selected_product {
+.tab_product:hover {
   background-color: #709b1d;
   border: 3px solid #709b1d;
+  .buttons_bar {
+    display: flex;
+    background-color: skyblue;
+    height: 52px;
+    position: relative;
+    top: -14%;
+    margin: 0 auto;
+  }
 }
 
 
