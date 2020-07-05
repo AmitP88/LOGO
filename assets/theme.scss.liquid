@@ -7155,13 +7155,28 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 .tab_product:hover {
   background-color: #709b1d;
   border: 3px solid #709b1d;
+  .price_and_rating {
+    display: none;
+  }
   .buttons_bar {
     display: flex;
-    background-color: skyblue;
     height: 52px;
-    position: relative;
-    top: -14%;
     margin: 0 auto;
+    .add_to_cart {
+      background-color: white;
+      background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_gray.png?v=1593891089');
+      background-size: 25px 25px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: none;
+      border-radius: 3px;
+      width: 40px;
+      height: 40px;
+      margin-left: 17px;
+      border-bottom: 3px solid #e4e4e4;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; 
+    }
   }
 }
 
