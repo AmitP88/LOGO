@@ -7146,7 +7146,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
   .buttons_bar {
     display: none;
-    .add_to_cart {
+    .add_to_cart, .add_to_wishlist {
       transition: 0.5s;
     }
   }
@@ -7165,9 +7165,8 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     display: flex;
     height: 52px;
     margin: 0 auto;
-    .add_to_cart {
+    .add_to_cart, .add_to_wishlist {
       background-color: white;
-      background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_gray.png?v=1593891089');
       background-size: 25px 25px;
       background-repeat: no-repeat;
       background-position: center center;
@@ -7180,6 +7179,12 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px; 
     }
+  }
+  .add_to_cart {
+    background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_gray.png?v=1593891089');    
+  }
+  .add_to_wishlist {
+    background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_gray.png?v=1593911148');
   }
 }
 
