@@ -7146,8 +7146,13 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
   .buttons_bar {
     display: none;
-    .add_to_cart, .add_to_wishlist {
+    .add_to_cart, .add_to_wishlist, .compare {
+      display: flex;
+      justify-content: center;
       transition: 0.5s;
+      .green_icon {
+        display: none;
+      }
     }
   }
 }
@@ -7195,6 +7200,14 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   .add_to_cart:hover {
     // background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_green_button.png?v=1593916239');
     width: 174px;
+    .gray_icon {
+      display: none;
+    }
+
+    .green_icon {
+      display: flex;
+    }
+
     .cart_text {
       display: flex;
       margin: 0 auto;
@@ -7206,6 +7219,14 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   .add_to_wishlist:hover {
     // background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_green.png?v=1593916371');
     width: 174px;
+    .gray_icon {
+      display: none;
+    }
+
+    .green_icon {
+      display: flex;
+    }
+
     .wishlist_text {
       display: flex;
       margin: 0 auto;
@@ -7217,6 +7238,14 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   .compare:hover {
     // background-image: url('https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_green.png?v=1593915728');
     width: 174px;
+    .gray_icon {
+      display: none;
+    }
+
+    .green_icon {
+      display: flex;
+    }
+
     .compare_text {
       display: flex;
       margin: 0 auto;
