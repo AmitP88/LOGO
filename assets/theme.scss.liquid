@@ -7318,30 +7318,35 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   height: 478px;
   background-color: transparent;
   margin: 86px auto 89px auto;
-  .tab {
-    background-color: transparent;
-    color: white;
-    height: 20px;
-    line-height: 31px;
-    font-size: 20px;
-    align-self: flex-end;
-    padding-bottom: 32px;
-    padding-left: 11px;
-    padding-right: 11px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;  
+  .tabs {
+    display: flex;
+
+    .tab {
+      background-color: transparent;
+      color: white;
+      height: 20px;
+      line-height: 31px;
+      font-size: 20px;
+      align-self: flex-end;
+      padding-bottom: 32px;
+      padding-left: 11px;
+      padding-right: 11px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;  
+    }
+    .active {
+      background-color: white;
+      color: #709b1d;
+      height: 20px;
+      line-height: 31px;
+      font-size: 20px;
+      align-self: flex-end;
+      padding-bottom: 32px;
+      padding-left: 11px;
+      padding-right: 11px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }    
   }
-  .active {
-    background-color: white;
-    color: #709b1d;
-    height: 20px;
-    line-height: 31px;
-    font-size: 20px;
-    align-self: flex-end;
-    padding-bottom: 32px;
-    padding-left: 11px;
-    padding-right: 11px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-  }
+
 }
