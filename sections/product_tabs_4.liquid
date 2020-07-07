@@ -10,7 +10,6 @@
         <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content2'>Tab2</a>
         <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content3'>Tab3</a>
         <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content4'>Tab4</a>
-        <a class="btn btn-danger mr-2" href="javascript:void(0)" data-trigger='content5'>Tab5</a>
     </nav>
       
       
@@ -30,10 +29,6 @@
     <div class="tabcontent  bg-light" id="content4">
         <h1>Tab4</h1>
         <p>This is some text about tab4</p>
-    </div>
-    <div class="tabcontent bg-light" id="content5">
-        <h1>Tab5</h1>
-        <p>This is some text about tab5</p>
     </div>
   </div>
 
@@ -62,7 +57,7 @@
   });
    
   function next(){
-      if(currentTab < 5){
+      if(currentTab < 4){
           $(".tabcontent").hide();
           currentTab++;
           $("#content"+(currentTab)).show();
