@@ -562,16 +562,16 @@
       var TabId = $(this).attr('data-trigger');
       $('div#'+TabId+' ').show();
        
-      console.log("Current Tab: " + TabId);
+      // console.log("Current Tab: " + TabId);
       currentTab = parseInt(TabId.replace("content", ""));
 
       var tab = $(event.target).context;
       var tabId = tab.id;
-      console.log('tab: ', tab);
+      // console.log('tab: ', tab);
       // console.log('tab_id: ', tabId);
 
       cur_tab = parseInt(tabId.replace("tab", ""));
-      console.log('cur_tab: ', cur_tab);
+      // console.log('cur_tab: ', cur_tab);
 
       $(".tab").removeClass("active");
       $(tab).addClass("active");
@@ -591,7 +591,7 @@
       if(cur_tab < 4){
         $(".tab").removeClass("active");
         cur_tab++;
-        console.log(cur_tab);
+        // console.log(cur_tab);
         $("#tab"+(cur_tab)).addClass("active");
       }
   }
@@ -606,7 +606,7 @@
       if(cur_tab > 1){
         $(".tab").removeClass("active");
         cur_tab--;
-        console.log(cur_tab);
+        // console.log(cur_tab);
         $("#tab"+(cur_tab)).addClass("active");
       }
   }
