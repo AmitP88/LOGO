@@ -7,7 +7,7 @@
 
     <nav class="multiTabs">
         <a href="javascript:void(0)" data-trigger='content1'>
-          <div class="tab active" id="tab1">Featured</div>
+          <div class="tab" id="tab1">Featured</div>
         </a>
         <a href="javascript:void(0)" data-trigger='content2'>
           <div class="tab" id="tab2">New Item</div>
@@ -554,6 +554,9 @@
   var currentTab = 1;
   $("#content1").show();
 
+  var cur_tab = 1;
+  $("#tab1").addClass("active");
+
   $(document).on('click', 'nav.multiTabs>a',
   function(){
       var TabId = $(this).attr('data-trigger');
@@ -563,7 +566,12 @@
       currentTab = parseInt(TabId.replace("content", ""));
 
       var tab = $(event.target).context;
+      var tabId = tab.id;
       console.log('tab: ', tab);
+      // console.log('tab_id: ', tabId);
+
+      cur_tab = parseInt(tabId.replace("tab", ""));
+      console.log('cur_tab: ', cur_tab);
 
       $(".tab").removeClass("active");
       $(tab).addClass("active");
@@ -579,6 +587,13 @@
           currentTab++;
           $("#content"+(currentTab)).show();
       }
+
+      if(cur_tab < 4){
+        $(".tab").removeClass("active");
+        cur_tab++;
+        console.log(cur_tab);
+        $("#tab"+(cur_tab)).addClass("active");
+      }
   }
    
   function prev(){
@@ -586,6 +601,13 @@
           $(".tabcontent").hide();
           currentTab--;
           $("#content" + (currentTab)).show();
+      }
+
+      if(cur_tab > 1){
+        $(".tab").removeClass("active");
+        cur_tab--;
+        console.log(cur_tab);
+        $("#tab"+(cur_tab)).addClass("active");
       }
   }
 </script>
