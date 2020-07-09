@@ -562,7 +562,14 @@
       console.log("Current Tab: " + TabId);
       currentTab = parseInt(TabId.replace("content", ""));
 
-      $('.tabcontent:not(#'+TabId+')').hide()
+      var tab = $(event.target).context;
+      console.log('tab: ', tab);
+
+      $(".tab").removeClass("active");
+      $(tab).addClass("active");
+
+
+      $('.tabcontent:not(#'+TabId+')').hide();
 
   });
    
