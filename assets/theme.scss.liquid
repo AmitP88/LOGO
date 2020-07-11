@@ -3285,17 +3285,21 @@ $shareBorderColor: #ececec;
       color: #ffff;
       position: relative;
       height: fit-content;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 40%;
     }
   }
 }
 
-.account-nav li:first-child {
+.top-nav-items {
+  display: flex;
+}
+
+.account-nav > .top-nav-items > li:first-child {
   a {
     color: #709b1d;
     margin: 0 auto;
     padding-top: 3.5px;
+    top: 15% !important;
   }
   background-color: white;
   width: 76px;
@@ -3305,7 +3309,7 @@ $shareBorderColor: #ececec;
   border-bottom-right-radius: 3px;
   margin-right: 10px;
   position: relative;
-  top: 50%;
+  top: 19%; // 50%
   transform: perspective(1px) translateY(-7%);
 }
 
@@ -6471,7 +6475,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   line-height: 17px;
   position: relative;
   // top: 50%;
-  transform: perspective(1px) translateY(-9%); // default: translateY(-40%)
+  transform: perspective(1px) translateY(9%); // default: translateY(-40%)
 }
 
 .switcher a {
@@ -6481,6 +6485,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  top: 2% !important;
 }
 
 .switcher a img {
@@ -7465,7 +7470,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .ultimate-currency {
   position: relative;
-  top: -2.8px;
+  top: 10%;
   margin-left: 5px;
 }
 
