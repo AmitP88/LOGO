@@ -1624,17 +1624,21 @@ html, body {
   // Fullscreen background
   // @include prefix('background-size', 'cover');
 // }
+.site-header {
+  .wrapper {
+    @include clearfix();
+    max-width: $siteWidth;
+    margin: 0 auto;
+    padding: 0 $gutter/2;
 
-.wrapper {
-  @include clearfix();
-  max-width: $siteWidth;
-  margin: 0 auto;
-  padding: 0 $gutter/2;
-
-  @include at-query ($min, $postSmall) {
-    padding: 0 53px; // 0 $gutter
-  }
+    @include at-query ($min, $postSmall) {
+      // padding: 0 53px; // 0 $gutter
+      padding-left: 60px;
+      padding-right: 45px;
+    }
+  }  
 }
+
 
 .main-content {
   display: block;
@@ -3505,6 +3509,7 @@ $shareBorderColor: #ececec;
     height: 40px;
     .align-nav-search-bar { // new
       display: flex; // new
+      justify-content: center; // new
       height: 40px;
       .search-bar {
         // display: none;
