@@ -3938,11 +3938,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 90px;
     @include at-query ($max, $medium) {
       height: auto;
       padding: 5%;
       flex-direction: column;
+    }
+    @include at-query ($min, 1400px) {
+    padding-right: 90px;
     }
 
     .we_accept {
