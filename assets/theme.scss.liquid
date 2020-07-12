@@ -3873,11 +3873,10 @@ footer {
         .heading {
           height: 25px;
           .title {
-            margin-bottom: 11px;
-          }
-          .underline {
-            position: relative;
-            top: -70%;
+            border-bottom: 1px solid black;
+            text-transform: uppercase;
+            font-size: large;
+            color: #8aac47;
           }
         }
         .list {
@@ -3885,9 +3884,18 @@ footer {
           li {
             display: flex;
             margin: 0;
-            margin-bottom: 16px;
+            align-items: center;
+            p {
+              text-transform: uppercase;
+              font-family: 'Open Sans', sans-serif;
+              font-weight: 600;
+              letter-spacing: 1px;
+              margin-bottom: 0;
+            }
             .bullet {
               margin-right: 12px;
+              height: 6px;
+              width: 4px;
             }
             .map {
               width: 10px;
