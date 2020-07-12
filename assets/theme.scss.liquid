@@ -3983,14 +3983,28 @@ footer {
       border-radius: 3px;
       border-bottom: 3px solid #5b8112;
       margin-right: 14.5px;
-      width: 119px;
+      // width: 119px;
       height: 32px;
+      width: fit-content; // 119px
+      padding: 0 13px;
       @include at-query ($min, 1024px) {
         margin-left: 70px;
       }
-      img {
-        padding: 9px 20px 8px 19px;
+      p {
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-size: medium;
+        height: fit-content;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 2px;
+        line-height: 25px;
       }
+      // img {
+      //   padding: 9px 20px 8px 19px;
+      // }
     }
     .social_media {
       display: flex;
