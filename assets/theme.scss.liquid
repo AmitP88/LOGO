@@ -3294,6 +3294,7 @@ $shareBorderColor: #ececec;
 .top-nav-items {
   display: flex;
   margin-right: 2%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .account-nav > .top-nav-items > li:first-child {
@@ -3321,9 +3322,12 @@ $shareBorderColor: #ececec;
   margin: 0;
   text-align: left;
   margin-left: -$gutter/2;
-  font-family: $accentFontStack;
-  font-weight: $accentFontWeight;
-  font-style: $accentFontStyle;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  // font-weight: 600;
+  // font-family: $accentFontStack;
+  // font-weight: $accentFontWeight;
+  // font-style: $accentFontStyle;
   font-size: {{ settings.type_navigation_size }};
   {% if settings.type_navigation_transform %}
   text-transform: uppercase;
@@ -3535,6 +3539,8 @@ $shareBorderColor: #ececec;
       display: flex;
       a {
         color: #709b1d;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
       }
       p {
         padding: 0 10px;
