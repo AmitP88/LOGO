@@ -3820,7 +3820,7 @@ $shareBorderColor: #ececec;
 ==============================================================================*/
 .brands {
   background-color: transparent;
-  height: 135px;
+  // height: 135px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3850,8 +3850,15 @@ $shareBorderColor: #ececec;
   .brands-list {
     display: flex;
     justify-content: center;
+    @include at-query ($max, 949px) {
+      flex-direction: column;
+      align-items: center;
+    }
     .brand {
       margin: 0 10px;
+      @include at-query ($max, 949px) {
+        margin: 10px;
+      }
       img {
         height: fit-content;
         margin: 0;
