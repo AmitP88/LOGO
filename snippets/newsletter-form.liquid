@@ -9,9 +9,7 @@
         <label for="Email" class="visually-hidden">{{ 'contact.form.email' | t }}</label>
         <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'layout.footer.newsletter_email_placeholder' | t }}" name="contact[email]" id="Email" class="input-group-field" aria-label="{{ 'layout.footer.newsletter_email_placeholder' | t }}" autocorrect="off" autocapitalize="off">
         <span class="input-group-btn">
-          <button type="submit" class="btn{% if button == 'secondary' %}-secondary{% endif %} btn--small" name="commit" id="subscribe">
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Lets_go.png?v=1593604910' }}" alt="lets_go">
-          </button>
+          <button type="submit" class="btn{% if button == 'secondary' %}-secondary{% endif %} btn--small" name="commit" id="subscribe">Let's go!</button>
         </span>
       </div>
     {% endif %}
