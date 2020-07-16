@@ -7130,6 +7130,9 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   background-size: cover;
   padding-top: 51px;
   padding-bottom: 54px;
+  @include at-query ($max, $medium) {
+    padding-bottom: 90px;
+  }
   .overlay {
     width: 100%;
     height: 100%;
@@ -7180,6 +7183,13 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     left: 0;
     right: 0;
     margin: 0 auto;
+    .input-group {
+      @include at-query ($max, $medium) {
+        display: unset;        
+      }
+    }
+
+
     input[type="email"] {
       background-color: rgba(212, 225, 188, 0.65);
       color: #729432;
@@ -7188,6 +7198,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       border: 3px solid #557c08;
       border-radius: 6px;
       height: 45px;
+      @include at-query ($max, $medium) {
+        width: 90%;
+        margin: 0 auto;
+      }
     }
     input[type="email"]::placeholder {
       color: #729432;
@@ -7212,6 +7226,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       font-weight: bold;
       font-size: 20px;
       letter-spacing: 2px;
+      @include at-query ($max, $medium) {
+        margin: 0 auto; 
+        margin-top: 10px;
+      }
     }
   }
 
