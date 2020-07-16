@@ -7166,6 +7166,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     letter-spacing: 1px;
     line-height: 20px;
     padding-bottom: 32px;
+    @include at-query ($max, $medium) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   .form-vertical {
