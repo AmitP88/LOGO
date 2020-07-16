@@ -168,9 +168,6 @@
           "rows": 1
         }
       },
-      "delivery-bar": {
-        "type": "delivery-bar"
-      },
       "product_tabs_4": {
         "type": "product_tabs_4"
       },
@@ -189,7 +186,6 @@
     },
     "content_for_index": [
       "slideshow",
-      "delivery-bar",
       "product_tabs_4",
       "promo",
       "subscribe",
