@@ -6597,7 +6597,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   opacity: 0.8;
   position: relative;
   top: 50%;
-  transform: translateY(90%); // -50%
+  transform: translateY(140%); // 90%
   width: 21px;
   height: 12px;
 }
@@ -6623,10 +6623,14 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   z-index: 9999;
   display: flex;
   justify-content: center;
-  height: 35px;
+  height: 44px; // 35px
   border-bottom: 2px solid #d9d9d9;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  .language_name {
+    line-height: 47px;
+    height: 25px;
+  }
 }
 
 
@@ -6635,7 +6639,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   height: 8px;
   position: relative;
   top: 50%;
-  transform: perspective(1px) translateY(-40%);
+  transform: perspective(1px) translateY(-10%); // -40%
 }
 
 .switcher .selected a {
@@ -6694,8 +6698,9 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .switcher .option a.selected {
-  background: #FFC;
   width: 116px;
+  border-bottom: none;
+  height: 42.76px;
 }
 
 #selected_lang_name {
