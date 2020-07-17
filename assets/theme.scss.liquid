@@ -6996,7 +6996,8 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 .grid-cell {
   background-color: #83b228;
   display: grid;
-  justify-content: center;
+  justify-content: start; // center
+  padding-left: 15px;
   font-size: 10px;
   color: white;
   line-height: 1;
@@ -7013,7 +7014,9 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     margin: 0 auto;
     margin-bottom: 10px;
   }
-
+  p {
+    margin: 0;
+  }
 }
 
 .grid-wrapper .grid-cell:nth-child(3) {
@@ -7037,7 +7040,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: inherit;
+  width: fit-content; // inherit
 }
 
 .cell-icon, .cell-text {
@@ -7045,45 +7048,62 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   width: min-content;
 }
 
-.grid-wrapper .grid-cell:nth-child(1) {
-  .cell-icon {
-    padding-left: 15px;
-    padding-right: 12px;
-  }
-  .cell-text img:nth-child(1) {
+.cell-text {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+  width: max-content;
+  display: block;
+  padding-left: 15px;
+  .title {
+    font-size: large;
+    font-weight: 100;
     padding-bottom: 7px;
   }
-}
-
-.grid-wrapper .grid-cell:nth-child(2) {
-  .cell-icon {
-    padding-left: 18px;
-    padding-right: 15px;
-  }
-  .cell-text img:nth-child(1) {
-    padding-bottom: 11px;
+  .description {
+    color: black;
   }
 }
 
-.grid-wrapper .grid-cell:nth-child(3) {
-  .cell-icon {
-    padding-left: 15px;
-    padding-right: 12px;
-  }
-  .cell-text img:nth-child(1) {
-    padding-bottom: 11px;
-  }
-}
 
-.grid-wrapper .grid-cell:last-child {
-  .cell-icon {
-    padding-left: 16px;
-    padding-right: 17px;
-  }
-  .cell-text img:nth-child(1) {
-    padding-bottom: 7px;
-  }
-}
+// .grid-wrapper .grid-cell:nth-child(1) {
+//   .cell-icon {
+//     padding-left: 15px;
+//     padding-right: 12px;
+//   }
+//   // .cell-text img:nth-child(1) {
+//   //   padding-bottom: 7px;
+//   // }
+// }
+
+// .grid-wrapper .grid-cell:nth-child(2) {
+//   .cell-icon {
+//     padding-left: 18px;
+//     padding-right: 15px;
+//   }
+//   .cell-text img:nth-child(1) {
+//     padding-bottom: 11px;
+//   }
+// }
+
+// .grid-wrapper .grid-cell:nth-child(3) {
+//   .cell-icon {
+//     padding-left: 15px;
+//     padding-right: 12px;
+//   }
+//   .cell-text img:nth-child(1) {
+//     padding-bottom: 11px;
+//   }
+// }
+
+// .grid-wrapper .grid-cell:last-child {
+//   .cell-icon {
+//     padding-left: 16px;
+//     padding-right: 17px;
+//   }
+//   .cell-text img:nth-child(1) {
+//     padding-bottom: 7px;
+//   }
+// }
 
 /*============================================================================
   # Product Tabs 4
