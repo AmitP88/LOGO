@@ -1,6 +1,7 @@
 <div class="promo">
   <div class="first half">
-    {{ all_products["primo-gh"].featured_image | img_tag }}
+    {% assign product_image =  all_products["primo-gh"].featured_image %}
+    <img src="{{ product_image | img_url: 'large' }}" alt="product_image">
   </div>
   <div class="second half">
     <!-- {{ COUNTDOWN }} -->
