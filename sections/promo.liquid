@@ -7,7 +7,7 @@
     <div class="price">
       <img class="green_circle" src="https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Ellipse_2.png?v=1595271556" alt="green_circle">
       {% assign compare_price = all_products["primo-gh"].compare_at_price %}
-      <p class="compare_price">{{ compare_price | money_without_trailing_zeros }}</p>
+      <p class="compare_price">{{ compare_price | money }}</p>
     </div>
 
   </div>

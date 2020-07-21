@@ -7139,13 +7139,19 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     .product_image {
       height: 100%;
       width: 100%;
+      position: relative;
+      z-index: 0;
     }
     .price {
       position: relative;
       bottom: 100%;
       left: 60%;
       .compare_price {
-        margin: 0;
+        width: min-content;
+        position: absolute;
+        left: 10%;
+        top: 30%;
+        z-index: 1;
       }
     }
   }
