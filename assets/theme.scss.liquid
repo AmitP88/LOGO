@@ -7207,7 +7207,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       font-size: 22px;
     }
     .description {
-      margin: 30px 45px 25px 0px;
+      margin: 30px 45px -10px 0px; // 30px 45px 25px 0px
       font-family: 'Open Sans', sans-serif;
       font-size: 15px;
     }
@@ -7847,9 +7847,15 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .sellify-countdown-timer>span {
   background: #709b1d !important;
-  padding: 0 !important;
+  // padding: 0 !important;
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
+  padding: 13px 14px !important;
+  border-bottom: 2px solid #4b6e08;
+  width: 65px !important;
+  height: 65px !important;
+  border-radius: 3px;
+  margin-right: 6px !important;
 }
 
 // .ts-value {
