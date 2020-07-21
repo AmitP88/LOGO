@@ -7847,16 +7847,18 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .sellify-countdown-timer>span {
   background: #709b1d !important;
-  // padding: 0 !important;
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
-  padding: 13px 14px !important;
+  padding: 13px 5px !important; // 13px 14px
   border-bottom: 2px solid #4b6e08;
   width: 65px !important;
+  // width: fit-content !important;
   height: 65px !important;
   border-radius: 3px;
   margin-right: 6px !important;
 }
+
+// Timer Digits 
 
 .sellify-countdown-timer>span>.ts-value {
   font-weight: bold !important;
@@ -7866,4 +7868,11 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 .sellify-countdown-timer>span:first-child>.ts-value {
   position: relative;
   right: 2px !important;
+}
+
+// Timer Text (Days, Hours, Minutes, etc)
+.sellify-countdown-timer>span>.ts-unit {
+  // letter-spacing: 0.5px !important;
+  font-size: 13px !important;
+  font-weight: 100px !important;
 }
