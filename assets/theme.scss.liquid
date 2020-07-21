@@ -3301,6 +3301,12 @@ $shareBorderColor: #ececec;
 .top-nav-items {
   display: flex;
   font-family: 'Open Sans', sans-serif;
+  // @include at-query ($max, 1023px) {
+  //   margin-right: 20%;    
+  // }
+  @include at-query ($max, 1200px) {
+    margin-right: 10%;    
+  }
 }
 
 .account-nav > .top-nav-items > li:first-child {
