@@ -15,5 +15,7 @@
   </div>
   <div class="second half">
     <!-- {{ COUNTDOWN }} -->
+    {% assign percent = all_products["primo-gh"].price | times: 10 | divided_by: all_products["primo-gh"].compare_at_price | times: 10 %}
+    <h1 class="heading"><span>{{ percent }}</span>off</h1>
   </div>
 </div>
