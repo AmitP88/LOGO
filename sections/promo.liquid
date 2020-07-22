@@ -7,9 +7,9 @@
     <div class="price">
       <img class="green_circle" src="https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Ellipse_2.png?v=1595271556" alt="green_circle">
       {% assign compare_price = all_products["primo-gh"].compare_at_price %}
-      <p class="compare_price">{{ compare_price | money_with_currency | replace: ',', '' }}</p>
+      <p class="compare_price">{{ compare_price | replace: ',', '' | money_with_currency }}</p>
       {% assign actual_price = all_products["primo-gh"].price %}
-      <p class="actual_price">{{ actual_price | money_with_currency | replace: ',', '' }}</p>
+      <p class="actual_price">{{ actual_price | replace: ',', '' | money_with_currency }}</p>
     </div>
 
   </div>
