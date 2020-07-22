@@ -15,7 +15,7 @@
   </div>
   <div class="second half">
     {% assign percent = all_products["primo-gh"].price | times: 10 | divided_by: all_products["primo-gh"].compare_at_price | times: 10 %}
-    <h1 class="heading"><span>{{ percent }} % </span>off</h1>
+    <h1 class="heading"><span>{{ percent }}%</span>off</h1>
     {% assign product_name = all_products["primo-gh"].title %}
     <h2 class="subheading">for <span>{{ product_name }}</span></h2>
     <p class="description-header">Power packed performance</p>
