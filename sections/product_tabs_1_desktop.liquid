@@ -13,7 +13,9 @@
     {% for product in Desktop_collection.products %}
       <div class="tab_product">
         <div class="product_photo">
-          <img src="{{ product.featured_image | img_url: 'large' }}" alt="product_image">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'large' }}" alt="product_image">            
+          </a>
         </div>
         <div class="product_name_container">
           <p>{{ product.title }}</p>
