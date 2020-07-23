@@ -11,7 +11,8 @@
           <div class="tab" id="tab1">{{ Featured_collection.title }}</div>
         </a>
         <a href="javascript:void(0)" data-trigger='content2'>
-          <div class="tab" id="tab2">New Item</div>
+          {% assign New_Item_collection = collections["new-item"] %}
+          <div class="tab" id="tab2">{{ New_Item_collection.title }}</div>
         </a>
         <a href="javascript:void(0)" data-trigger='content3'>
           <div class="tab" id="tab3">Top Seller</div>
@@ -94,131 +95,72 @@
 
 
 
-
-
-
-
-
-
   <div class="tabcontent" id="content2">
     <div class="tabs_container">
-      <div class="tab_product">
-        <div class="product_photo">
-          <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/product_1.png?v=1593976605' }}" alt="product_photo">
-        </div>
-        <div class="product_name_container">
-          <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Smart_Phone_Primo_V1.png?v=1593796862' }}" alt="product_name">
-        </div>
-        <div class="price_and_rating">
-          <div class="price">
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/10299.png?v=1593799422' }}" alt="price">
+      {% for product in New_Item_collection.products %}
+        <div class="tab_product">
+          <div class="product_photo">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'large' }}" alt="product_image">            
+            </a>
           </div>
-          <div class="rating">
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/rating_4_and_half_stars.png?v=1593818569' }}" alt="rating">
+          <div class="product_name_container">
+            <p>{{ product.title }}</p>
           </div>
-        </div>
-
-
-        <div class="buttons_bar">
-          <button class="add_to_cart">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_gray.png?v=1593891089' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_green_button.png?v=1593916239' }}" alt="green_icon">
-            <img class="cart_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/add_to_cart.png?v=1593920675' }}" alt="button_text">
-          </button>
-          <button class="add_to_wishlist">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_gray.png?v=1593911148' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_green.png?v=1593916371' }}" alt="green_icon">
-            <img class="wishlist_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_to_wishlist.png?v=1593920675' }}" alt="button_text">
-          </button>
-          <button class="compare">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_gray.png?v=1593913446' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_green.png?v=1593915728' }}" alt="green_icon">
-            <img class="compare_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_toCompare.png?v=1593920675' }}" alt="button_text" >
-          </button>
-        </div>
-      </div>
-
-      <div class="tab_product">
-        <div class="product_photo">
-          <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/product_2.png?v=1593976605' }}" alt="product_photo">
-        </div>
-        <div class="product_name_container">
-          <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Smart_Phone_Primo_V1.png?v=1593796862' }}" alt="product_name">
-        </div>
-        <div class="price_and_rating">
-          <div class="price">
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/10000_8000.png?v=1593800023' }}" alt="price">
+          <div class="price_and_rating">
+            <div class="price">
+              {% if product.compare_at_price %}
+                <p class="previous_price">{{ product.compare_at_price | money_with_currency }}</p>
+                <p class="current_price price_highlight">{{ product.price | money_with_currency }}</p>               
+              {% else %}
+                <p class="current_price">{{ product.price | money_with_currency }}</p>
+              {% endif %}
+            </div>
+            <div class="rating">
+              <div class="yotpo bottomLine"
+                data-appkey="3lLBvLxtXto59qFkbJb0OW5hGtCQ7VU2CrOsDGgn"
+                data-domain="{{shop.permanent_domain | escape }}"
+                data-product-id="{{ product.id }}"
+                data-product-models="{{ product.id }}"
+                data-name="{{ product.title | escape }}"
+                data-url="{{ shop.url }}{{ product.url }}"
+                data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                data-description="{{ product.description | escape }}"
+                data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+              </div>
+            </div>
           </div>
-          <div class="rating">
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/rating_4_of_5_stars.png?v=1593818569' }}" alt="rating">
-          </div>
-        </div>
 
-        <div class="buttons_bar">
-          <button class="add_to_cart">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_gray.png?v=1593891089' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_green_button.png?v=1593916239' }}" alt="green_icon">
-            <img class="cart_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/add_to_cart.png?v=1593920675' }}" alt="button_text">
-          </button>
-          <button class="add_to_wishlist">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_gray.png?v=1593911148' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_green.png?v=1593916371' }}" alt="green_icon">
-            <img class="wishlist_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_to_wishlist.png?v=1593920675' }}" alt="button_text">
-          </button>
-          <button class="compare">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_gray.png?v=1593913446' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_green.png?v=1593915728' }}" alt="green_icon">
-            <img class="compare_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_toCompare.png?v=1593920675' }}" alt="button_text" >
-          </button>
-        </div>
-      </div>
-
-
-
-
-      <div class="tab_product">
-        <div class="product_photo">
-          <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/product_3.png?v=1593976604' }}" alt="product_photo">
-        </div>
-        <div class="product_name_container">
-          <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Smart_Phone_Primo_V1.png?v=1593796862' }}" alt="product_name">
-        </div>
-        <div class="price_and_rating">
-          <div class="price">
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/10299_221dde58-6d33-4ec0-bb66-7f36a584182b.png?v=1593805360' }}" alt="price">
-          </div>
-          <div class="rating">
-            <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/rating_3_and_half_stars.png?v=1593818569' }}" alt="rating">
+          <div class="buttons_bar">
+            <button class="add_to_cart">
+              <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_gray.png?v=1593891089' }}" alt="gray_icon">
+              <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_green_button.png?v=1593916239' }}" alt="green_icon">
+              <!-- <img class="cart_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/add_to_cart.png?v=1593920675' }}" alt="button_text"> -->
+              <p class="cart_text">Add to cart</p>
+            </button>
+            <button class="add_to_wishlist">
+              <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_gray.png?v=1593911148' }}" alt="gray_icon">
+              <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_green.png?v=1593916371' }}" alt="green_icon">
+              <!-- <img class="wishlist_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_to_wishlist.png?v=1593920675' }}" alt="button_text"> -->
+              <p class="wishlist_text">Add to wishlist</p>
+            </button>
+            <button class="compare">
+              <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_gray.png?v=1593913446' }}" alt="gray_icon">
+              <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_green.png?v=1593915728' }}" alt="green_icon">
+              <!-- <img class="compare_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_toCompare.png?v=1593920675' }}" alt="button_text" > -->
+              <p class="compare_text">Add to compare</p>
+            </button>
           </div>
         </div>
-
-
-        <div class="buttons_bar">
-          <button class="add_to_cart">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_gray.png?v=1593891089' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/cart_green_button.png?v=1593916239' }}" alt="green_icon">
-            <img class="cart_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/add_to_cart.png?v=1593920675' }}" alt="button_text">
-          </button>
-          <button class="add_to_wishlist">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_gray.png?v=1593911148' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/wishlist_green.png?v=1593916371' }}" alt="green_icon">
-            <img class="wishlist_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_to_wishlist.png?v=1593920675' }}" alt="button_text">
-          </button>
-          <button class="compare">
-            <img class="gray_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_gray.png?v=1593913446' }}" alt="gray_icon">
-            <img class="green_icon" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/compare_green.png?v=1593915728' }}" alt="green_icon">
-            <img class="compare_text" src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/Add_toCompare.png?v=1593920675' }}" alt="button_text" >
-          </button>
-        </div>
-
-
-      </div>
-      <!-- {% include 'tab_product' %}
-      {% include 'tab_product' %}
-      {% include 'tab_product' %} -->      
+      {% endfor %}      
     </div>
-
   </div>
+
+
+
+
+
+
 
 
 
