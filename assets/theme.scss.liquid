@@ -7416,14 +7416,6 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       font-size: larger;
       font-weight: 500;
     }
-    // img {
-    //   position: absolute;
-    //   margin: auto;
-    //   top: 0;
-    //   left: 0;
-    //   right: 0;
-    //   bottom: 0;
-    // }
   }
   .price_and_rating {
     height: 52px;
@@ -7431,13 +7423,23 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     top: -4%;
     margin: 0 auto;
     .price {
-      img {
-        position: absolute;
-        margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 20px;
+      color: #696969;
+      .previous_price, .current_price {
+        margin: 0;
+      }
+      .previous_price {
+        margin-right: 5px;
+        text-decoration: line-through;
+      }
+      .current_price {
+
       }
     }
     .rating {
@@ -7447,7 +7449,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
         top: 0;
         left: 0;
         right: 0;
-        bottom: -115%;
+        bottom: -75%; // -115%
       }
     }
   }
