@@ -20,8 +20,12 @@
         </div>
         <div class="price_and_rating">
           <div class="price">
-            <p class="previous_price">{{ product.compare_at_price | money_with_currency }}</p>
-            <p class="current_price">{{ product.price | money_with_currency }}</p>
+            {% if product.compare_at_price %}
+              <p class="previous_price">{{ product.compare_at_price | money_with_currency }}</p>
+              <p class="current_price price_highlight">{{ product.price | money_with_currency }}</p>               
+            {% else %}
+              <p class="current_price">{{ product.price | money_with_currency }}</p>
+            {% endif %}
           </div>
           <div class="rating">
             <img src="{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/rating_4_and_half_stars.png?v=1593818569' }}" alt="rating">
