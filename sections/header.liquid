@@ -2,6 +2,9 @@
 <header class="top-menu">
   <div class="wrapper wrapper-account-nav">
     {% include 'account-nav' %}
+      <!-- Cart Count -->
+      {% assign cart_count = cart.item_count %}
+      <h1 class="cart_count" style="display: none;">{{ cart_count }}</h1>
   </div>
 </header>
 
@@ -68,7 +71,8 @@
           <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle">
             <span class="icon icon-cart">{{ 'https://cdn.shopify.com/s/files/1/0401/9974/9789/files/large_cart.png?v=1592026541' | img_tag }}</span>
             <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count | prepend: '00' | slice: -2, 2  }}</span>
-          </a>          
+          </a>
+          
         </div>
 
       </div>
