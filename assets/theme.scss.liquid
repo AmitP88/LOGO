@@ -7365,7 +7365,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 
-.arrow {
+.arrow_container {
   height: 27px;
   width: 27px;
   background-color: #ffffff;
@@ -7373,17 +7373,30 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-.arrow:hover {
+.arrow_container:hover {
   cursor: pointer;
 }
 
+.arrow {
+  border: solid #a1d738;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
 .left {
-  margin-left: 4px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 5px;
 }
 
 .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
   margin-right: 5px;
 }
 
