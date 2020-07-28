@@ -6757,6 +6757,12 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   max-width: 100%;
   width: 100%;
   padding: 0px;
+  @media screen and (min-width: 320px) and (max-width: 425px){
+    height: 260px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 767px){
+    height: 350px;
+  }
 }
 
 .flexslider {
@@ -6764,9 +6770,16 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .flexslider .slides img {
+  display: none;
   // padding-top: 250px;
   width: auto; // 90%
   height: max-content; // 461px
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px){
+  .flex-prev, .flex-next {
+    height: 350px;      
+  }
 }
 
 
@@ -6826,6 +6839,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .flex-control-nav {
+  display: none;
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -6956,6 +6970,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 
 .delivery-bar {
+  display: none;
   position: relative;
   width: 100%;
   height: 95px;
