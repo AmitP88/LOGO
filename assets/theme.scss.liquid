@@ -6764,9 +6764,8 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 .flexslider .slides img {
-  // padding-top: 250px;
   width: auto; // 90%
-  height: max-content; // 461px
+  height: auto; // 461px
 }
 
 .flex-viewport {
@@ -6778,8 +6777,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     height: 261px;
   }
   .flexslider .slides img {
-    height: auto;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 }
 
@@ -6787,12 +6785,19 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   .flexslider {
     height: 461px;
   }
+
+  .flexslider .slides img {
+    margin-top: 60px;
+  }
+
+
   .flex-prev, .flex-next {
     height: 350px;      
   }
 
   .flex-control-nav {
-    bottom: calc(-34% + -2px) !important;
+    // bottom: calc(-34% + -2px) !important;
+    bottom: calc(24% + -2px) !important;
   }
 }
 
