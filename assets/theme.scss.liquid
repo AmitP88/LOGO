@@ -4902,12 +4902,6 @@ a.remove {
 .flexslider {
   margin: 0 0 $gutter*1.5;
   padding: 0;
-  @include at-query ($min, 320px) {
-    height: 261px;
-  }
-  @include at-query ($min, $medium) {
-    height: 461px;
-  }
 }
 .flexslider li { margin: 0; max-width: 100%; }
 .flexslider .slides > li {
@@ -6775,7 +6769,23 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   height: max-content; // 461px
 }
 
+.flex-viewport {
+  height: 100% !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px){
+  .flexslider {
+    height: 261px;
+  }
+  .flexslider .slides img {
+    height: auto;
+  }
+}
+
 @media screen and (min-width: 426px) and (max-width: 767px){
+  .flexslider {
+    height: 461px;
+  }
   .flex-prev, .flex-next {
     height: 350px;      
   }
