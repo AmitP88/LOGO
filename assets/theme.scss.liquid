@@ -6780,24 +6780,24 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px){
-  .flexslider, .flex-prev, .flex-next {
-    height: 300px;
-  }
-
-  @media screen and (min-width: 426px) and (max-width: 599px){
-    .flexslider .slides img {
-      margin-top: 60px;
-    }
-  }
-
-  @media screen and (min-width: 600px) and (max-width: 768px){
-    .flexslider .slides img {
-      margin-top: 30px;
-    }
+  .flexslider .slides img {
+    margin-top: 30px;
   }
 
   .flex-control-nav {
     bottom: -2px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 599px){
+    .flexslider, .flex-prev, .flex-next {
+      height: 250px; // 300px
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 768px){
+    .flexslider, .flex-prev, .flex-next {
+      height: 300px; // 300px
+    }
   }
 }
 
