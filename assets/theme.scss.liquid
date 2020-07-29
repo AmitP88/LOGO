@@ -4993,7 +4993,7 @@ html[xmlns] .slides { display: block; }
 /*================ Control Nav ================*/
 .flex-control-nav {
   position: absolute;
-  bottom: -$gutter;
+  // bottom: -$gutter;
   width: 100%;
   text-align: center;
   margin: 0;
@@ -6773,6 +6773,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   .flexslider .slides img {
     margin-top: 30px;
   }
+
+  .flex-control-nav {
+    bottom: -2px;
+  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px){
@@ -6793,8 +6797,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   }
 
   .flex-control-nav {
-    // bottom: calc(-34% + -2px) !important;
-    bottom: calc(24% + -2px) !important;
+    bottom: -2px;
   }
 }
 
@@ -6810,8 +6813,13 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   }
 
   .flex-control-nav {
-    // bottom: calc(-34% + -2px) !important;
-    bottom: calc(24% + -2px) !important;
+    bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .flex-control-nav {
+    // bottom: -96px;
   }
 }
 
@@ -6871,15 +6879,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 }
 
-.flex-control-nav {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+
 
 // Left Slider Arrow
 .flex-direction-nav a.flex-prev {
@@ -6935,17 +6935,6 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .placeholder-noblocks.slide-link {
   background-color: transparent !important;
-}
-
-// Slider dots
-.flex-control-nav {
-  position: absolute;
-  bottom: 2px; // -2px
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .flex-control-nav li {
