@@ -6768,44 +6768,6 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   height: 100% !important;
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px){
-  .flexslider, .flex-prev, .flex-next {
-    height: 200px;
-  }
-  .flexslider .slides img {
-    margin-top: 30px;
-  }
-}
-
-@media screen and (min-width: 426px) and (max-width: 768px){
-  .flexslider .slides img {
-    margin-top: 30px;
-  }
-
-  @media screen and (min-width: 426px) and (max-width: 599px){
-    .flexslider, .flex-prev, .flex-next {
-      height: 250px; // 300px
-    }
-  }
-
-  @media screen and (min-width: 600px) and (max-width: 768px){
-    .flexslider, .flex-prev, .flex-next {
-      height: 300px; // 300px
-    }
-  }
-}
-
-
-
-@media screen and (min-width: 769px) and (max-width: 1023px){
-  .flexslider, .flex-prev, .flex-next {
-    height: 377px;
-  }
-
-  .flexslider .slides img {
-    margin-top: 60px;
-  }
-}
 
 @include at-query ($min, $large) {
   .slides {
@@ -6886,34 +6848,6 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   background-size: cover;
   background-position: center center;
   margin-bottom: 1px;
-}
-
-@media screen and (min-width: 769px) and (max-width: 1023px){
-  #shopify-section-slideshow {
-    height: 377px;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 800px) {
-  .flexslider .slides img {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (min-width: 801px) and (max-width: 1023px){
-  .flexslider .slides img {
-    margin-top: 5px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #shopify-section-slideshow {
-    height: 460px;
-  }
-
-  .flexslider .slides img {
-    margin-top: 0px;
-  }
 }
 
 .placeholder-noblocks.slide-link {
@@ -8028,4 +7962,136 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   border-top-right-radius: 3px;
   padding: 2px;
   margin: 1px;
+}
+
+/*============================================================================
+  # MEDIA QUERIES
+==============================================================================*/
+
+@media screen and (min-width: 320px) and (max-width: 425px){
+  .flexslider, .flex-prev, .flex-next {
+    height: 200px;
+  }
+  .flexslider .slides img {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+  .flexslider .slides img {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 599px){
+    .flexslider, .flex-prev, .flex-next {
+      height: 250px; // 300px
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 768px){
+    .flexslider, .flex-prev, .flex-next {
+      height: 300px; // 300px
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px){
+  #shopify-section-slideshow {
+    height: 377px;
+  }
+
+  .flexslider, .flex-prev, .flex-next {
+    height: 377px;
+  }
+
+  .flexslider .slides img {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 800px) {
+    .flexslider .slides img {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 801px) and (max-width: 1023px){
+    .flexslider .slides img {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #shopify-section-slideshow {
+    height: 460px;
+  }
+
+  .flexslider .slides img {
+    margin-top: 0px;
+  }
+}/*============================================================================
+  # MEDIA QUERIES
+==============================================================================*/
+
+@media screen and (min-width: 320px) and (max-width: 425px){
+  .flexslider, .flex-prev, .flex-next {
+    height: 200px;
+  }
+  .flexslider .slides img {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+  .flexslider .slides img {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 599px){
+    .flexslider, .flex-prev, .flex-next {
+      height: 250px; // 300px
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 768px){
+    .flexslider, .flex-prev, .flex-next {
+      height: 300px; // 300px
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px){
+  #shopify-section-slideshow {
+    height: 377px;
+  }
+
+  .flexslider, .flex-prev, .flex-next {
+    height: 377px;
+  }
+
+  .flexslider .slides img {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 800px) {
+    .flexslider .slides img {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 801px) and (max-width: 1023px){
+    .flexslider .slides img {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #shopify-section-slideshow {
+    height: 460px;
+  }
+
+  .flexslider .slides img {
+    margin-top: 0px;
+  }
 }
