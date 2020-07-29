@@ -6751,12 +6751,6 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   max-width: 100%;
   width: 100%;
   padding: 0px;
-  @media screen and (min-width: 320px) and (max-width: 425px){
-    height: 200px; // 260px
-  }
-  @media screen and (min-width: 426px) and (max-width: 1023px){
-    height: 350px;
-  }
 }
 
 .flexslider {
@@ -6781,18 +6775,38 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 1023px){
-  .flexslider {
-    height: 461px;
+@media screen and (min-width: 426px) and (max-width: 768px){
+  .flexslider, .flex-prev, .flex-next {
+    height: 300px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 599px){
+    .flexslider .slides img {
+      margin-top: 60px;
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 768px){
+    .flexslider .slides img {
+      margin-top: 30px;
+    }
+  }
+
+  .flex-control-nav {
+    // bottom: calc(-34% + -2px) !important;
+    bottom: calc(24% + -2px) !important;
+  }
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1023px){
+  .flexslider, .flex-prev, .flex-next {
+    height: 360px;
   }
 
   .flexslider .slides img {
     margin-top: 60px;
-  }
-
-
-  .flex-prev, .flex-next {
-    height: 350px;      
   }
 
   .flex-control-nav {
