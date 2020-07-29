@@ -4992,7 +4992,8 @@ html[xmlns] .slides { display: block; }
 
 /*================ Control Nav ================*/
 .flex-control-nav {
-  position: absolute;
+  position: relative;
+  bottom: 0;
   // bottom: -$gutter;
   width: 100%;
   text-align: center;
@@ -6755,6 +6756,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 .flexslider {
   margin: 0 !important;
+  height: 100%;
 }
 
 .flexslider .slides img {
@@ -6772,10 +6774,6 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   }
   .flexslider .slides img {
     margin-top: 30px;
-  }
-
-  .flex-control-nav {
-    bottom: -2px;
   }
 }
 
@@ -6805,24 +6803,13 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 @media screen and (min-width: 769px) and (max-width: 1023px){
   .flexslider, .flex-prev, .flex-next {
-    height: 360px;
+    height: 377px;
   }
 
   .flexslider .slides img {
     margin-top: 60px;
   }
-
-  .flex-control-nav {
-    bottom: 8px;
-  }
 }
-
-@media screen and (min-width: 1024px){
-  .flex-control-nav {
-    // bottom: -96px;
-  }
-}
-
 
 @include at-query ($min, $large) {
   .slides {
@@ -6907,7 +6894,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 
 @media screen and (min-width: 769px) and (max-width: 1023px){
   #shopify-section-slideshow {
-    height: 350px;
+    height: 377px;
   }
 }
 
