@@ -5,6 +5,7 @@
       <i class="arrow left"></i>
     </div>
 
+    <!-- Desktop Horizontal Tabs -->
     <nav class="multiTabs">
         <a href="javascript:void(0)" data-trigger='content1'>
           {% assign Featured_collection = collections["Featured"] %}
@@ -24,12 +25,25 @@
         </a>
     </nav>
     
+    <!-- Mobile Tab Dropdown -->
     <div class="tabs_dropdown">
-      <select name="cars" id="cars">
-        <option class="tab active" value="volvo">Featured</option>
-        <option class="tab active" value="saab">New Item</option>
-        <option class="tab active" value="opel">Top Seller</option>
-        <option class="tab active" value="audi">Top Rating</option>
+      <select name="product_sets" id="sets">
+        <option class="tab active" value="featured" data-trigger='content1'>
+          {% assign Featured_collection = collections["Featured"] %}
+          <div class="tab" id="mobile_tab1">{{ Featured_collection.title }}</div>
+        </option>
+        <option class="tab active" value="new_item" data-trigger='content2'>
+          {% assign New_Item_collection = collections["new-item"] %}
+          <div class="tab" id="mobile_tab2">{{ New_Item_collection.title }}</div>
+        </option>
+        <option class="tab active" value="top_seller" data-trigger='content3'>
+          {% assign Top_Seller_collection = collections["top-seller"] %}
+          <div class="tab" id="mobile_tab3">{{ Top_Seller_collection.title }}</div>
+        </option>
+        <option class="tab active" value="top_rating" data-trigger='content4'>
+          {% assign Top_Rating_collection = collections["top-rating"] %}
+          <div class="tab" id="mobile_tab4">{{ Top_Rating_collection.title }}</div>
+        </option>
       </select>
     </div>
 
@@ -293,6 +307,7 @@
   var cur_tab = 1;
   $("#tab1").addClass("active");
 
+  // Tabs for Desktop
   $(document).on('click', 'nav.multiTabs>a',
   function(){
       var TabId = $(this).attr('data-trigger');
@@ -308,6 +323,31 @@
 
       cur_tab = parseInt(tabId.replace("tab", ""));
       // console.log('cur_tab: ', cur_tab);
+
+      $(".tab").removeClass("active");
+      $(tab).addClass("active");
+
+
+      $('.tabcontent:not(#'+TabId+')').hide();
+
+  });
+
+  // Tabs for Mobile Dropdown
+  $(document).on('click', 'div.tabs_dropdown.select.option.div.tab',
+  function(){
+      var TabId = $(this).attr('data-trigger');
+      $('div#'+TabId+' ').show();
+       
+      console.log("Current Tab: " + TabId);
+      currentTab = parseInt(TabId.replace("content", ""));
+
+      var tab = $(event.target).context;
+      var tabId = tab.id;
+      console.log('tab: ', tab);
+      console.log('tab_id: ', tabId);
+
+      cur_tab = parseInt(tabId.replace("mobile_tab", ""));
+      console.log('cur_tab: ', cur_tab);
 
       $(".tab").removeClass("active");
       $(tab).addClass("active");
