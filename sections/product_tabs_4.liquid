@@ -22,7 +22,14 @@
           {% assign Top_Rating_collection = collections["top-rating"] %}
           <div class="tab" id="tab4">{{ Top_Rating_collection.title }}</div>
         </a>
-    </nav>    
+    </nav>
+    
+    <select class="tabs_dropdown" name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
 
     <div class="arrow_container" onclick="next()">
       <i class="arrow right"></i>
