@@ -14,7 +14,7 @@
       <div class="tab_product">
         {% if product.compare_at_price %}
           <div class="discount_percent">
-            <p>discount</p>
+            <p>{{ product.price | minus: product.compare_at_price | divided_by: 100 | money_without_currency | remove: '.00' }}%</p>
           </div>
         {% endif %}
         <div class="product_photo">
