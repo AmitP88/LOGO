@@ -31,7 +31,7 @@
 
 {% if collections[featured_row].all_products_count != 0 and section.settings.home_featured_row != blank %}
 
-  {% if section.settings.title != blank %}
+  <!-- {% if section.settings.title != blank %}
     <div class="section-header">
       <p class="h1{% if more_link %} section-header--left{% endif %}">{{ section.settings.title | escape }}</p>
       {% if more_link %}
@@ -41,7 +41,7 @@
         </div>
       {% endif %}
     </div>
-  {% endif %}
+  {% endif %} -->
 
   <div class="grid-uniform row-negative-bottom">
     {% for product in collections[featured_row].products limit: product_limit %}
@@ -51,12 +51,12 @@
   </div>
 
 {% else %}
-  <div class="section-header">
+  <!-- <div class="section-header">
     <p class="h1 section-header--left">{{ section.settings.title | escape }}</p>
     <div class="section-header--right">
       <a href="{{ collections[featured_row].url }}">{{ 'homepage.featured_collection_rows.more' | t }} &rsaquo;</a>
     </div>
-  </div>
+  </div> -->
 
   <div class="grid text-center row-negative-bottom">
     <div class="grid-item">
