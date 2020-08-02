@@ -7,7 +7,7 @@
   {% if request.page_type == 'product' %}
 
     {% if collection %}
-      <span class="divider" aria-hidden="true">&rsaquo;</span>
+      <span class="divider" aria-hidden="true">&#x2f;</span>
       {% if collection.handle %}
         {%- if collection.url == blank -%}
           {% assign url = routes.all_products_collection_url %}
@@ -18,12 +18,12 @@
         {{ collection.title | link_to: url }}
       {% endif %}
     {% endif %}
-    <span class="divider" aria-hidden="true">&rsaquo;</span>
+    <span class="divider" aria-hidden="true">&#x2f;</span>
     <span class="breadcrumb--truncate">{{ product.title }}</span>
 
   {% elsif request.page_type == 'collection' and collection.handle %}
 
-    <span class="divider" aria-hidden="true">&rsaquo;</span>
+    <span class="divider" aria-hidden="true">&#x2f;</span>
 
     {% if current_tags %}
 
@@ -35,7 +35,7 @@
 
       {{ collection.title | link_to: url }}
 
-      <span class="divider" aria-hidden="true">&rsaquo;</span>
+      <span class="divider" aria-hidden="true">&#x2f;</span>
 
       {% for tag in current_tags %}
 
@@ -68,10 +68,10 @@
 
   {% elsif request.page_type == 'blog' %}
 
-    <span class="divider" aria-hidden="true">&rsaquo;</span>
+    <span class="divider" aria-hidden="true">&#x2f;</span>
     {% if current_tags %}
       {{ blog.title | link_to: blog.url }}
-      <span class="divider" aria-hidden="true">&rsaquo;</span>
+      <span class="divider" aria-hidden="true">&#x2f;</span>
       <span>{{ current_tags | join: " + " }}</span>
     {% else %}
     <span>{{ blog.title }}</span>
@@ -79,19 +79,19 @@
 
   {% elsif request.page_type == 'article' %}
 
-    <span class="divider" aria-hidden="true">&rsaquo;</span>
+    <span class="divider" aria-hidden="true">&#x2f;</span>
     {{ blog.title | link_to: blog.url }}
-    <span class="divider" aria-hidden="true">&rsaquo;</span>
+    <span class="divider" aria-hidden="true">&#x2f;</span>
     <span>{{ article.title }}</span>
 
   {% elsif request.page_type == 'page' %}
 
-    <span class="divider" aria-hidden="true">&rsaquo;</span>
+    <span class="divider" aria-hidden="true">&#x2f;</span>
    <span>{{ page.title }}</span>
 
   {% else %}
 
-    <span class="divider" aria-hidden="true">&rsaquo;</span>
+    <span class="divider" aria-hidden="true">&#x2f;</span>
    <span>{{ page_title }}</span>
 
   {% endif %}
