@@ -187,13 +187,13 @@
 
   <div class="tabcontent" id="content3">
     <div class="tabs_container">
-      {% if product.compare_at_price %}
-        <div class="discount_percent">
-          <p>{{ product.price | minus: product.compare_at_price | divided_by: 100 | money_without_currency | remove: '.00' }}%</p>
-        </div>
-      {% endif %}
       {% for product in Top_Seller_collection.products %}
         <div class="tab_product">
+          {% if product.compare_at_price %}
+            <div class="discount_percent">
+              <p>{{ product.price | minus: product.compare_at_price | divided_by: 100 | money_without_currency | remove: '.00' }}%</p>
+            </div>
+          {% endif %}
           <div class="product_photo">
             <a href="{{ product.url }}">
               <img src="{{ product.featured_image | img_url: 'large' }}" alt="product_image">            
@@ -255,13 +255,13 @@
 
   <div class="tabcontent" id="content4">
     <div class="tabs_container">
-      {% if product.compare_at_price %}
-        <div class="discount_percent">
-          <p>{{ product.price | minus: product.compare_at_price | divided_by: 100 | money_without_currency | remove: '.00' }}%</p>
-        </div>
-      {% endif %}
       {% for product in Top_Rating_collection.products %}
         <div class="tab_product">
+          {% if product.compare_at_price %}
+            <div class="discount_percent">
+              <p>{{ product.price | minus: product.compare_at_price | divided_by: 100 | money_without_currency | remove: '.00' }}%</p>
+            </div>
+          {% endif %}
           <div class="product_photo">
             <a href="{{ product.url }}">
               <img src="{{ product.featured_image | img_url: 'large' }}" alt="product_image">            
