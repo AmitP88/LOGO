@@ -12,6 +12,11 @@
   <div class="tabs_container desktop">
     {% for product in Desktop_collection.products %}
       <div class="tab_product">
+        {% if product.compare_at_price %}
+          <div class="discount_percent">
+            discount
+          </div>
+        {% endif %}
         <div class="product_photo">
           <a href="{{ product.url }}">
             <img src="{{ product.featured_image | img_url: 'large' }}" alt="product_image">            
