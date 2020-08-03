@@ -20,35 +20,6 @@
 
     <div class="grid-item{% if has_sidebar %} large--four-fifths grid-border--left{% endif %}">
 
-      {% comment %}
-        Different markup if description is set
-      {% endcomment %}
-      <!-- {% if collection.description != blank %}
-        <header class="section-header">
-          <h1 class="section-header--title h1">{{ collection.title }}</h1>
-          <div class="rte rte--header">
-            {{ collection.description }}
-          </div>
-        </header>
-        <hr{% if has_sidebar %} class="hr--offset-left"{% endif %}>
-        <div class="section-header">
-          <div class="section-header--right">
-            {% include 'collection-sorting' %}
-            {% include 'collection-views' %}
-            {% include 'toggle-filters' %}
-          </div>
-        </div>
-      {% else %}
-      <header class="section-header">
-        <h1 class="section-header--title section-header--left h1">{{ collection.title }}</h1>
-        <div class="section-header--right">
-          {% include 'collection-sorting' %}
-          {% include 'collection-views' %}
-          {% include 'toggle-filters' %}
-        </div>
-      </header>
-      {% endif %} -->
-
       <div class="grid-uniform">
         {%- case section.settings.grid -%}
           {%- when '2' -%}
@@ -74,13 +45,7 @@
         {%- endcase -%}
 
         {% for product in collection.products %}
-          {% comment %}
-          {% if has_sidebar %}
-            {% assign grid_item_width = 'large--one-quarter medium--one-third small--one-half' %}
-          {% else %}
-            {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
-          {% endif %}
-          {% endcomment %}
+
           {% include 'product-grid-item' with grid_item_width %}
 
         {% else %}
