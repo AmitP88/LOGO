@@ -4435,53 +4435,88 @@ $innerFilterIconWidth: 6px;
 /*============================================================================
   #Breadcrumbs
 ==============================================================================*/
+// .breadcrumb {
+//   font-size: 13px;
+//   border-bottom: 1px solid $colorBorder;
+//   margin-bottom: $gutter;
+//   margin-top: -$gutter; // offset .main-content padding
+//   height: 52px;
+
+//   @include at-query ($min, $large) {
+//     .template-page &,
+//     .template-product & {
+//       margin-bottom: $gutter*2;
+//     }
+//   }
+
+//   @include at-query ($max, $medium) {
+//     height: auto;
+//   }
+
+//   a {
+//     color: $colorTextBody;
+
+//     &:hover {
+//       color: $colorTextBody;
+//     }
+//   }
+
+//   a,
+//   span {
+//     display: inline-block;
+//     padding: $gutter/2 7px $gutter/2 0;
+//     margin-right: 7px;
+//     overflow: hidden;
+
+//     &:first-child {
+//       padding-left: 0;
+//     }
+//   }
+//   .divider {
+//     font-size: 15px;
+//     font-family: 'Verdana', sans-serif;
+//     padding: 13px 7px 13px 0;
+//     color: #767676;
+//   }
+
+//   & + .grid-border {
+//     margin-top: -$gutter;
+//   }
+// }
+
 .breadcrumb {
   font-size: 13px;
-  border-bottom: 1px solid $colorBorder;
-  margin-bottom: $gutter;
-  margin-top: -$gutter; // offset .main-content padding
-  height: 52px;
-
-  @include at-query ($min, $large) {
-    .template-page &,
-    .template-product & {
-      margin-bottom: $gutter*2;
-    }
-  }
-
-  @include at-query ($max, $medium) {
-    height: auto;
-  }
-
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 0;
+  height: 32px;
+  max-width: 890px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #709b1d;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
   a {
-    color: $colorTextBody;
-
-    &:hover {
-      color: $colorTextBody;
-    }
-  }
-
-  a,
-  span {
-    display: inline-block;
-    padding: $gutter/2 7px $gutter/2 0;
-    margin-right: 7px;
-    overflow: hidden;
-
-    &:first-child {
-      padding-left: 0;
-    }
+    padding: 0;
   }
   .divider {
-    font-size: 15px;
-    font-family: 'Verdana', sans-serif;
-    padding: 13px 7px 13px 0;
-    color: #767676;
+    padding: 0;
+  }
+  span {
+    padding: 0;
   }
 
-  & + .grid-border {
-    margin-top: -$gutter;
+  a, span, .divider {
+    color: white;
+    margin-right: 5px;
   }
+}
+
+.main-content {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 60px;
 }
 
 .breadcrumb--truncate {
@@ -8779,55 +8814,3 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*============================================================================
-  # Product Grid Page
-==============================================================================*/
-.breadcrumb {
-  font-size: 13px;
-  border-bottom: 1px solid #ececec;
-  margin-bottom: 0;
-  height: 32px;
-  max-width: 890px;
-  margin: 0 auto;
-  padding: 0 15px;
-  background-color: #709b1d;
-  font-family: 'Open Sans', sans-serif;
-  a {
-    padding: 0;
-  }
-  .divider {
-    padding: 0;
-  }
-  span {
-    padding: 0;
-  }
-
-  a, span, .divider {
-    color: white;
-  }
-}
-
-.main-content {
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 60px;
-}
