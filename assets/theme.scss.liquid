@@ -8288,6 +8288,25 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       grid-row-end: 3;
       max-width: 220px;
       // margin: 0 auto;
+      .filters {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;      
+        * {
+          width: 100%;
+          height: 30%;
+        }
+        .category {
+          background-color: antiquewhite;
+        }
+        .by_brand {
+          background-color: aquamarine;
+        }
+        .by_price {
+          background-color: pink;
+        }
+      }
     }
     .three {
       background-color: blue;
