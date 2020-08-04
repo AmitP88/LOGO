@@ -8231,26 +8231,46 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
           flex-direction: column;
           justify-content: space-between;
           height: 100%;      
-        * {
-          width: 100%;
-          height: 100%;
+          * {
+            width: 100%;
+            height: 33%;
+          }
+          .category {
+            background-color: antiquewhite;
+          }
+          .by_brand {
+            background-color: aquamarine;
+          }
+          .by_price {
+            background-color: pink;
+          }
         }
-        .category {
-          background-color: antiquewhite;
-        }
-        .by_brand {
-          background-color: aquamarine;
-        }
-        .by_price {
-          background-color: pink;
-        }
-      }
     }
     .three {
       background-color: blue;
     }
     .four {
       background-color: purple;
+      .additional_banners {
+        display: block;
+        width: 100%;
+        height: 100%;
+        * {
+          width: 100%;
+          height: 100%;
+        }
+        .banner:first-child {
+          background-color: red;
+        }
+
+        .banner:nth-child(2) {
+          background-color: yellow;
+        }
+
+        .banner:last-child {
+          background-color: green;
+        }
+      }
     }
   }
 
@@ -8344,6 +8364,32 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       grid-row-end: 7;
       max-width: 220px;
       // margin: 0 auto;
+      .additional_banners {
+        display: block;
+        width: 100%;
+        height: 100%;
+        .banner:first-child, .banner:last-child {
+          width: 100%;
+          height: 40%;
+        }
+
+        .banner:first-child {
+          background-color: red;
+        }
+
+        .banner:nth-child(2) {
+          height: 20%;
+          width: 100%;
+          background-color: yellow;
+        }
+
+        .banner:last-child {
+          background-color: green;
+        }
+
+
+
+      }
     }
   }
 }
