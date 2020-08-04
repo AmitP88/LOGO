@@ -8060,7 +8060,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 .collection_page_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   background-color: lightblue;
   max-width: 942px;
@@ -8083,10 +8083,14 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 4; 
+    grid-row-end: 7; 
   }
   .four {
     background-color: purple;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 7;
   }
 }
 
