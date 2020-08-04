@@ -8059,22 +8059,31 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
 // Grid for the body
 .collection_page_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 20px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
   background-color: lightblue;
   max-width: 942px;
   height: 100vh;
   margin: 0 auto;
   .one {
     background-color: darkred;
-    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
   .two {
     background-color: darkgreen;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
   .three {
     background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4; 
   }
   .four {
     background-color: purple;
