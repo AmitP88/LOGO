@@ -8191,6 +8191,35 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
     position: absolute;
     z-index: -1;
   }
+
+  /*============================================================================
+    # All Products Page
+  ==============================================================================*/
+  // Grid for the body
+  .collection_page_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    background-color: lightblue;
+    max-width: 942px;
+    height: 100vh;
+    margin: 0 auto;
+    .one {
+      background-color: darkred;
+    }
+    .two {
+      background-color: darkgreen;
+    }
+    .three {
+      background-color: blue;
+    }
+    .four {
+      background-color: purple;
+    }
+  }
+
+
 }
 
 @media screen and (min-width: 768px){
