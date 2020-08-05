@@ -8258,13 +8258,30 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          height: 100%;      
+          height: 100%;
+          width: 220px;
+          margin: 0 auto;
           * {
             width: 100%;
             height: 33%;
           }
           .category {
             background-color: antiquewhite;
+            height: fit-content;
+            .heading {
+              width: 100%;
+              height: auto;
+              background-color: #7fa522;
+              font-family: 'Open Sans', sans-serif;
+              text-transform: uppercase;
+              color: white;
+              font-size: large;
+              p {
+                text-align: start;
+                margin: 0;
+                padding-left: 9px;
+              }
+            }
           }
           .by_brand {
             background-color: aquamarine;
@@ -8394,6 +8411,21 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
         }
         .category {
           background-color: antiquewhite;
+          height: fit-content;
+          .heading {
+            width: 100%;
+            height: auto;
+            background-color: #7fa522;
+            font-family: 'Open Sans', sans-serif;
+            text-transform: uppercase;
+            color: white;
+            font-size: large;
+            p {
+              text-align: start;
+              margin: 0;
+              padding-left: 9px;
+            }
+          }
         }
         .by_brand {
           background-color: aquamarine;
