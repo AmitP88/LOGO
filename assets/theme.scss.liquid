@@ -8199,11 +8199,11 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   .collection_page_grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     background-color: transparent;
     max-width: 942px;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     margin-top: 32px;
     .one {
@@ -8304,6 +8304,18 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
           width: 100%;
           height: 100%;
         }
+        .banner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            font-family: 'Open Sans', sans-serif;
+            text-transform: capitalize;
+            color: white;
+            font-size: xx-large;
+            font-weight: 500;
+          }
+        }
         .banner:first-child {
           background-color: red;
         }
@@ -8334,11 +8346,11 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
   .collection_page_grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     background-color: transparent;
     max-width: 942px;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     margin-top: 32px;
     .one {
@@ -8456,9 +8468,21 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
         display: block;
         width: 100%;
         height: 100%;
+        .banner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            font-family: 'Open Sans', sans-serif;
+            text-transform: capitalize;
+            color: white;
+            font-size: xx-large;
+            font-weight: 500;
+          }
+        }
         .banner:first-child, .banner:last-child {
-          width: 100%;
-          height: 40%;
+          width: 220px;
+          height: 309px;
         }
 
         .banner:first-child {
