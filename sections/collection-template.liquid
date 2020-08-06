@@ -22,7 +22,22 @@
       <div class="by_price"></div>
     </div>
   </div>
-  <div class="three"></div>
+
+
+
+  <div class="three">
+    {% for product in collections.all.products %}
+      <p>{{ product.title }}</p>
+    {% endfor %}
+
+  </div>
+
+
+
+
+
+
+
   <div class="four">
     <div class="additional_banners">
       <div class="banner">
