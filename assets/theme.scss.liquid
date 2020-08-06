@@ -8295,7 +8295,8 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       background-color: blue;
     }
     .four {
-      background-color: purple;
+      background-color: transparent;
+      margin: 0 auto;
       .additional_banners {
         display: block;
         width: 100%;
@@ -8308,6 +8309,8 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: #d7d7d7;
+          padding: 0 55px 0 25px;
           p {
             font-family: 'Open Sans', sans-serif;
             text-transform: capitalize;
@@ -8316,16 +8319,16 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
             font-weight: 500;
           }
         }
-        .banner:first-child {
-          background-color: red;
+
+        .banner:first-child, .banner:last-child {
+          width: 220px;
+          height: 309px;
         }
 
         .banner:nth-child(2) {
-          background-color: yellow;
-        }
-
-        .banner:last-child {
-          background-color: green;
+          height: 20%;
+          width: 100%;
+          margin: 25px 0;
         }
       }
     }
@@ -8457,7 +8460,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       // margin: 0 auto;
     }
     .four {
-      background-color: purple;
+      background-color: transparent;
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 3;
@@ -8470,8 +8473,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
         height: 100%;
         .banner {
           display: flex;
-          justify-content: center;
+          // justify-content: center;
           align-items: center;
+          background-color: #d7d7d7;
+          padding: 0 55px 0 25px;
           p {
             font-family: 'Open Sans', sans-serif;
             text-transform: capitalize;
@@ -8485,18 +8490,10 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
           height: 309px;
         }
 
-        .banner:first-child {
-          background-color: red;
-        }
-
         .banner:nth-child(2) {
           height: 20%;
           width: 100%;
-          background-color: yellow;
-        }
-
-        .banner:last-child {
-          background-color: green;
+          margin: 25px 0;
         }
 
 
