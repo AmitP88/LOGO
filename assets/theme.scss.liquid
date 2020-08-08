@@ -8462,6 +8462,13 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
       grid-row-end: 7; 
       max-width: 689px;
       // margin: 0 auto;
+      .grid-collection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .grid-product {
+          display: grid;
+        }
+      }
     }
     .four {
       background-color: transparent;
