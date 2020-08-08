@@ -8296,12 +8296,74 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
         }
     }
     .three {
-      background-color: #b3e5fc;
+      background-color: transparent;
       .grid-collection {
         display: grid;
         grid-gap: 20px;
         .grid-product {
           display: grid;
+          margin: 0 auto;
+          .tab_product {
+            width: 220px;
+            height: 290px;
+            .product_photo {
+              width: 214px;
+              height: 225px;
+              img {
+                width: 214px;
+                height: 225px;                
+              }
+            }
+            .product_name_container {
+              width: 198px;
+              height: 24px;
+              p {
+                font-size: small;
+              }
+            }
+            .price_and_rating {
+              height: 48px;
+              position: relative;
+              top: -3%;
+              .price {
+                font-size: 17px;
+                font-weight: 600;
+                margin-top: 0;
+              }
+              .rating {
+                .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star {
+                  font-size: 12.5px;
+                }
+
+                .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-half-star {
+                  font-size: 12.5px;
+                }
+
+                .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-empty-star {
+                  font-size: 12.5px;
+                }
+              }
+            }
+
+            .add_to_cart, .add_to_wishlist, .compare {
+              height: 35px;
+              min-width: 30px;
+            }
+
+            .gray_icon {
+              height: 20px;
+              width: 20px;
+            }
+
+            .green_icon {
+              height: 15px;
+              width: 15px;
+            }
+
+            .cart_text, .wishlist_text, .compare_text {
+              font-size: 9px;
+            }
+          }
         }
       }
     }
@@ -8476,8 +8538,6 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
         grid-row-gap: 20px;
         .grid-product {
           display: grid;
-
-
           .tab_product {
             width: 220px;
             height: 290px;
@@ -8538,21 +8598,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
             .cart_text, .wishlist_text, .compare_text {
               font-size: 9px;
             }
-
-
-
-
           }
-
-
-
-
-
-
-
-
-
-
         }
       }
     }
