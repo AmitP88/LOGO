@@ -8495,7 +8495,7 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
           height: 100%;      
         * {
           width: 100%;
-          height: 30%;
+          // height: 30%;
         }
         .category, .by_brand, .by_price {
           background-color: antiquewhite;
@@ -8517,10 +8517,13 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
           .list {
             li {
               display: flex;
-              margin: 0;
-              align-items: center;
-              // height: 10px;
-              margin-bottom: 5px; // 15px
+              line-height: 4px;
+              margin: 15px 9px;
+              .bullet {
+                margin-right: 12px;
+                height: 6px;
+                width: 4px;
+              }
               p {
                 text-transform: uppercase;
                 font-family: 'Open Sans', sans-serif;
