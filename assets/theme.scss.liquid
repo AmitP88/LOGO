@@ -8611,6 +8611,38 @@ $color-blankstate-background: rgba($colorTextBody, 0.1);
             }
           }
         }
+
+        .by_brand {
+          .item {
+            display: flex;
+            margin-top: 10px;
+            p {
+              margin: 0 auto;
+              margin-left: 7px;
+              height: 10px;
+              line-height: 10px;
+            }
+          }
+          .mock_checkbox {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #9d9d9d;
+          }
+
+          input[type=checkbox] {
+            width: 10px;
+            height: 10px;
+          }
+
+          .item input[type=checkbox]:checked + .mock_checkbox {
+            /* apply styles for checked checkbox here */
+            background-color: green;
+          }          
+        }
+
+
+
+
       }
     }
     .three {
