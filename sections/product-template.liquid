@@ -94,7 +94,7 @@
       <p class="product-meta" itemprop="brand">{{ product.vendor }}</p>
     {% endif %}
 
-    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <!-- <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
       {% assign variant = product.selected_or_first_available_variant %}
 
@@ -201,7 +201,7 @@
       {% endform %}
 
       <hr class="{% if section.settings.enable_payment_button %}product-template-hr{% endif %}">
-    </div>
+    </div> -->
 
     <div class="product-description rte" itemprop="description">
       {{ product.description }}
