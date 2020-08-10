@@ -26,7 +26,7 @@
   </style>
 {% endif %}
 
-<div class="grid" itemscope itemtype="http://schema.org/Product">
+<!-- <div class="grid" itemscope itemtype="http://schema.org/Product">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
 
@@ -94,7 +94,7 @@
       <p class="product-meta" itemprop="brand">{{ product.vendor }}</p>
     {% endif %}
 
-    <!-- <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
       {% assign variant = product.selected_or_first_available_variant %}
 
@@ -201,7 +201,7 @@
       {% endform %}
 
       <hr class="{% if section.settings.enable_payment_button %}product-template-hr{% endif %}">
-    </div> -->
+    </div>
 
     <div class="product-description rte" itemprop="description">
       {{ product.description }}
@@ -212,7 +212,7 @@
     {% endif %}
 
   </div>
-</div>
+</div> -->
 
 {% if section.settings.related_products_enable %}
   {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
